@@ -1,0 +1,137 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/* global styles */
+
+body {max-width:80em !important; line-height:1.5}
+
+/* kill <marquee> */
+marquee {-moz-binding:none !important;display:block;height:auto !important}
+
+/* Disable the deprecated HTML <font> tag. */
+font {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+}
+
+/* apply specific styles on a per-site basis */
+@-moz-document domain(math.unc.edu) {
+    body {
+        max-width:none !important
+    }
+}
+
+@-moz-document domain(news.ycombinator.com), domain(news.ycombinator.org) {
+    body * {
+        font-family: sans-serif !important;
+    }
+    .title, .comhead, .default, .comment {
+        font-size: 12pt !important; 
+        line-height:1.2 !important
+    }
+    .subtext {
+        font-size: 10pt !important; 
+        line-height: 1.44 !important
+    }
+    .default p {
+        margin-top:1.2em !important
+    }
+}
+
+@-moz-document url-prefix("https://www.google.com/accounts/ServiceLogin?service=mail") {
+    img[src$="talk_bubbles.gif"], .form-noindent[cellpadding="0"], 
+    body br, td[width="75%"] { 
+        display: none !important; 
+    }
+    table[width="95%"], table[width="94%"] {
+        width: 40% !important;
+    }
+    body > table:first-child {
+        margin-bottom: -1em !important;
+    }
+}
+
+@-moz-document domain(youtube.com) {
+    body {
+        margin:0 auto !important;
+        font: small sans-serif !important;
+    }
+
+    #alerts, #watch-headline-user-info, #watch-main-container, #footer-container {
+        display: none !important;
+    }
+
+    #content, .watch-wide-mode #watch-this-vid, #watch-headline, #watch-video, #watch-main, #watch-owner, #content, #watch-headline, #masthead, #baseDiv {
+        width: 100% !important;
+    }
+
+    #watch-headline h1 .long-title {
+        font-size: inherit !important;
+        letter-spacing: 0 !important;
+        font-weight: normal !important;
+    }
+
+    button, input, textarea {
+        font: inherit !important;
+    }
+}
+
+@-moz-document domain(google.com), domain(deviantart.com), domain(facebook.com) {
+    body {max-width:none !important}
+}
+
+@-moz-document domain(facebook.com) {
+    #pagelet_presence {
+        display: none !important;
+    }
+}
+
+@-moz-document domain(blackboard.unc.edu), domain(nytimes.com) {
+    body {line-height:1.5 !important}
+}
+
+@-moz-document domain(its.unc.edu), domain(help.unc.edu) {
+    p {letter-spacing:0 !important}
+}
+
+@-moz-document domain(nytimes.com) {
+    #TP_container, #TP_container_shadow {display:none !important}
+    body {padding-top:0 !important}
+}
+
+@-moz-document domain(pastebin.com) {
+    #code_frame {
+        font-size:medium !important;
+    }
+}
+
+@-moz-document url-prefix("http://compgen.unc.edu/wiki") {
+    body {
+        font-size: small !important;
+    }
+    mw_content {
+        line-height: 1.5 !important;
+    }
+    #mw_main, #p-personal, #mw_header {
+        font-size: small !important;
+    }
+    #mw_contentholder {
+        width: 40em !important;
+    }
+}
+
+/* change max-width of wiki pages */
+body.mediawiki {max-width:100% !important}
+body.mediawiki #panel {font-size:1em !important}
+body.mediawiki #bodyContent {max-width:40em !important;}
+body.mediawiki #bodyContent {font-size:1em !important}
+body.mediawiki h1, body.mediawiki h2, body.mediawiki h3 {font-weight: 500 !important}
+body.mediawiki p {margin: 0 0 1.5em 0 !important}
+
+span.__conkeror_hint {
+    font: x-small "Segoe UI" !important;
+    color: #303030 !important;
+    background-color:#ececcc !important;
+    padding:0 2px !important;
+    text-transform: uppercase !important;
+}

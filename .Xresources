@@ -1,0 +1,49 @@
+! Emacs
+Emacs.font: Consolas:pixelsize=14
+Emacs.geometry: 80x43
+
+! Xcursor
+Xcursor*theme: Chameleon-Anthracite-Small
+
+! URxvt
+URxvt*font: xft:consolas:pixelsize=14
+URxvt*background: #3f3f3f
+URxvt*foreground: #dcdccc
+URxvt*scrollBar: false
+URxvt*perl-ext-common: default,matcher
+URxvt.urlLauncher: conkeror
+URxvt.matcher.button: 1
+URxvt.urgentOnBell: true
+
+! black
+URxvt*color0: #202020
+URxvt*color8: #709080 
+! red
+URxvt*color1: #705050 
+URxvt*color9: #dca3a3 
+! green
+URxvt*color2: #5f7f5f
+URxvt*color10: #afd8af
+! yellow
+URxvt*color3: #dfaf8f
+URxvt*color11: #f0dfaf
+! blue
+URxvt*color4: #5c888b
+URxvt*color12: #94bff3
+! magenta
+URxvt*color5: #dc8cc3 
+URxvt*color13: #ec93d3
+! cyan
+URxvt*color6: #8cd0d3 
+URxvt*color14: #93e0e3
+!white
+URxvt*color7: #3f3f3f
+URxvt*color15: #ffffff
+
+
+! Xft
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
