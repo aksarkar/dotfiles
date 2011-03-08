@@ -10,6 +10,7 @@ define_webjump("calendar", "http://google.com/calendar");
 define_webjump("hacker_news", 
                "http://www.google.com/search?q=site:news.ycombinator.com+%s",
                $alternative = "http://news.ycombinator.com/");
+define_webjump("github", "https://github.com");
 define_webjump("twitter", "https://twitter.com");
 define_webjump("facebook", "https://facebook.com");
 define_webjump("nytimes", "http://nytimes.com");
