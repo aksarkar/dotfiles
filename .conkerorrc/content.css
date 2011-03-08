@@ -120,6 +120,15 @@ font {
     }
 }
 
+@-moz-document domain(github.com) {
+    pre, code, .tree-browser {
+        font-family: monospace !important;
+    }
+    #readme {
+        font-size: medium !important;
+    }
+}
+
 /* change max-width of wiki pages */
 body.mediawiki {max-width:100% !important}
 body.mediawiki #panel {font-size:1em !important}
