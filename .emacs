@@ -130,6 +130,9 @@
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
 (autoload 'camldebug "camldebug" "Run the Caml debugger" t)
 
+; git
+(require 'git)
+
 ; Compile the current Java buffer
 (defun javac-current()
   (interactive)
@@ -273,6 +276,10 @@
   ;; If there is more than one, they won't work right.
  '(flymake-errline ((t (:inherit font-lock-warning))))
  '(flymake-warnline ((t (:inherit font-lock-warning))))
+ '(git-status-face ((((class color) (background dark)) (:inherit font-lock-warning-face))))
+ '(git-unknown-face ((((class color) (background dark)) nil)))
+ '(git-unmerged-face ((((class color) (background dark)) (:inherit font-lock-warning))))
+ '(git-uptodate-face ((((class color) (background dark)) (:inherit font-lock-comment))))
  '(js2-warning-face ((t (:inherit font-lock-warning))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) (:background "#3f3f3f"))))
  '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) (:background "#303030"))))
