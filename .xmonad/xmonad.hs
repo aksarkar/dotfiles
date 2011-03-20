@@ -72,6 +72,7 @@ main = xmonad $ ewmh $ defaultConfig
        , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 2dB+ unmute")
        , ("<XF86AudioMute>", spawn "amixer set Master toggle")
        , ("M-p", spawn dmenu')
+       , ("M-s", spawn "quodlibet --previous")
        , ("M-d", spawn "quodlibet --play-pause")
        , ("M-f", spawn "quodlibet --next")
        ]
