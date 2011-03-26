@@ -40,10 +40,13 @@ define_webjump("javadoc",
                "http://www.google.com/search?q=%s " +
                "site=download.oracle.com/javase/6/docs/api");
 
+// External links
 url_remoting_fn = load_url_in_new_buffer;
 
+// Modeline
 remove_hook("mode_line_hook", mode_line_adder(clock_widget));
 
+// Hints
 hint_digits = "asdfqwer";
 hint_background_color = "#ececec";
 active_hint_background_color = "#e0e0ff";
@@ -51,14 +54,13 @@ image_hint_background_color = "#ececec";
 active_image_hint_background_color = "#d0d0ff";
 hints_display_url_panel = true;
 
+// External editor
 editor_shell_command = "emacsclient -c";
 view_source_use_external_editor = true;
 
 can_kill_last_buffer = false;
 
 require("page-modes/gmail.js");
-
-require("noscript");
 
 browser_prevent_automatic_form_focus_mode(true);
 
