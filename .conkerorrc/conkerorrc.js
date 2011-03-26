@@ -62,6 +62,4 @@ can_kill_last_buffer = false;
 
 require("page-modes/gmail.js");
 
-browser_prevent_automatic_form_focus_mode(true);
-
-download_buffer_automatic_open_target = 1;
+download_buffer_automatic_open_target = OPEN_NEW_BUFFER;
