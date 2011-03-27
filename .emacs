@@ -132,6 +132,8 @@
 
 ; git
 (require 'git)
+(add-to-list 'load-path "~/.lisp/gitsum")
+(require 'gitsum)
 
 ; Compile the current Java buffer
 (defun javac-current()
