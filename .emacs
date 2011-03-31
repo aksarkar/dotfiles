@@ -79,12 +79,10 @@
                             "%r.tex" "%r.pdf"))))
 
 ; Modeline
-(setq display-time-day-and-date 't)
+(setq display-time-day-and-date nil)
 (line-number-mode 1)
 (column-number-mode 1)
-(which-function-mode)
-(icomplete-mode)
-
+(which-function-mode 1)
 (setq default-mode-line-format
       (quote ("-" (line-number-mode "L%l-")
 	      (column-number-mode "C%c-")
