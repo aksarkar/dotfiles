@@ -32,17 +32,16 @@
 ; Stop leaving backup~ files scattered everywhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups"))) 
 
-; Remove toolbar
+; Remove superfluous GUI
+(scroll-bar-mode -1)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 ; Disable splash screen
 (setq inhibit-startup-message t)
 
 ; Disable scratch message
 (setq initial-scratch-message nil)
-
-; No scrollbar
-(set-scroll-bar-mode nil)
 
 ; Enable syntax highlighting
 (global-font-lock-mode 't)
