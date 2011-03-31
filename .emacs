@@ -277,6 +277,12 @@
   ;; If there is more than one, they won't work right.
  '(flymake-errline ((t (:inherit font-lock-warning))))
  '(flymake-warnline ((t (:inherit font-lock-warning))))
+ '(font-wikipedia-bold-face ((((class color) (background dark)) (:inherit bold))))
+ '(font-wikipedia-italic-face ((((class color) (background dark)) (:inherit italic))))
+ '(font-wikipedia-math-face ((((class color) (background dark)) (:inherit font-lock-string-face))))
+ '(font-wikipedia-string-face ((((class color) (background dark)) (:inherit font-lock-string-face))))
+ '(font-wikipedia-verbatim-face ((((class color) (background dark)) (:inherit font-lock-keyword-face))))
+ '(font-wikipedia-warning-face ((((class color) (background dark)) (:inherit font-lock-warning))))
  '(git-status-face ((((class color) (background dark)) (:inherit font-lock-warning-face))))
  '(git-unknown-face ((((class color) (background dark)) nil)))
  '(git-unmerged-face ((((class color) (background dark)) (:inherit font-lock-warning))))
