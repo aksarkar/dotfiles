@@ -7,7 +7,8 @@
 (color-theme-zenburn)
 
 ; Get around UNIX selection nonsense
-(menu-bar-enable-clipboard)
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 ; Set window title
 (setq frame-title-format '(buffer-file-name "%f - Emacs" "Emacs")) 
