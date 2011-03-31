@@ -57,9 +57,6 @@
 ; ISwitch buffers
 (iswitchb-mode t)
 
-; Use aspell to check spelling
-(setq-default ispell-program-name "aspell")
-
 ; Make editing CamelCase less painful
 (global-subword-mode t)
 
@@ -98,7 +95,20 @@
 	      (which-func-mode
 	       ("" which-func-format "-")) (-3 . "%p") "-%-")))
 
-(setq line-number-display-limit 99999999)
+; Always display line number
+(setq line-number-display-limit nil)
+
+; Enable incremental completion
+(icomplete-mode 1)
+
+; Always indent using spaces
+(setq-default indent-tabs-mode nil)
+
+; When mark is active, highlight selected region
+(transient-mark-mode 1)
+
+; Don't automatically page up/down when scrolling
+(setq scroll-preserve-screen-position t)
 
 ; Python mode
 (load-library "python-mode")
@@ -143,15 +153,6 @@
 (add-hook 'java-mode-hook
           (lambda ()
             (local-set-key "\C-c\C-c" 'javac-current)))
-
-; Always indent using spaces
-(setq-default indent-tabs-mode nil)
-
-; When mark is active, highlight selected region
-(transient-mark-mode 1)
-
-; Don't automatically page up/down when scrolling
-(setq scroll-preserve-screen-position t)
 
 ;; FIXME temp hack to get a little better java 1.5 support
 (let* ((java-keywords
