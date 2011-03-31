@@ -32,6 +32,8 @@ define_webjump("790 ", "http://cs.unc.edu/Courses/comp790-090-s11/");
 define_webjump("archwiki", 
                "https://wiki.archlinux.org/index.php/Special:Search?search=%s", 
                $alternative = "https://wiki.archlinux.org/");
+define_webjump("aur", "https://aur.archlinux.org/packages.php?K=%s",
+               $alternative = "https://aur.archlinux.org");
 define_webjump("emacswiki",
                "http://www.google.com/cse?cx=004774160799092323420%3A6-ff2s0o6yi" +
                "&q=%s&sa=Search&siteurl=emacswiki.org%2F",
