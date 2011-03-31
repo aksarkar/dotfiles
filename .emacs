@@ -13,23 +13,23 @@
 ; Set window title
 (setq frame-title-format '(buffer-file-name "%f - Emacs" "Emacs")) 
 
-; No newlines created on Ctrl-n.
+; Do not create newline on Ctrl-n.
 (setq next-line-add-newlines nil)
 
 ; Turn off bell on error
 (setq visible-bell nil)
 
-; Scroll up/down one line only when cursor at bottom/top of page.
+; Scroll up/down one line only when cursor is at top/bottom of page.
 (setq scroll-conservatively 1000)
 
-; Set auto-fill mode by default, and fill column
+; Auto fill lines
 (setq-default fill-column 79)
 (auto-fill-mode)
 
 ; Stop forcing me to spell out "yes"
 (fset 'yes-or-no-p 'y-or-n-p) 
 
-; Stop leaving backup~ turds scattered everywhere
+; Stop leaving backup~ files scattered everywhere
 (setq backup-directory-alist '(("." . "~/.emacs-backups"))) 
 
 ; Remove toolbar
@@ -44,7 +44,7 @@
 ; No scrollbar
 (set-scroll-bar-mode nil)
 
-; Syntax-highlighting
+; Enable syntax highlighting
 (global-font-lock-mode 't)
 (setq font-lock-support-mode 'jit-lock-mode)
 
