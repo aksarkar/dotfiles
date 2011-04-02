@@ -2,6 +2,8 @@
 define_webjump("mail", "https://gmail.com");
 define_webjump("reader", "http://google.com/reader");
 define_webjump("calendar", "http://google.com/calendar");
+define_webjump("maps", "http://maps.google.com/?q=%s");
+define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 
 // Frequently read
 define_webjump("hacker_news", 
@@ -37,3 +39,7 @@ define_webjump("emacswiki",
 define_webjump("javadoc",
                "http://www.google.com/search?q=%s " +
                "site=download.oracle.com/javase/6/docs/api");
+define_webjump("conkerorwiki",
+               "http://conkeror.org",
+               $alternative="http://conkeror.org/?action=fullsearch&context=60" +
+               "&value=%s&fullsearch=Text");
