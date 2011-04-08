@@ -41,7 +41,6 @@ URxvt.urgentOnBell: true
 *color7: #3f3f3f
 *color15: #ffffff
 
-
 ! Xft
 Xft.dpi: 96
 Xft.antialias: true
