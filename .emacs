@@ -60,6 +60,9 @@
 ; Make editing CamelCase less painful
 (global-subword-mode t)
 
+; Make eshell completion match bash
+(setq eshell-cmpl-cycle-completions nil)
+
 ; C comments
 (add-hook 'c-mode-hook
           '(lambda()
