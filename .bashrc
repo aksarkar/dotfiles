@@ -8,6 +8,7 @@ alias ls='ls -F --color=always'
 alias la='ls -a'
 alias ll='ls -l'
 alias grep='grep --color=auto'
+alias ml='make -f /usr/local/include/makefiles/Makefile.LATEX '
 PS1='\u@\h:\w\$ '
 
 export EDITOR='emacsclient -c --alternate-editor=emacs'
