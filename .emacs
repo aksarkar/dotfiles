@@ -111,6 +111,10 @@
 ; Don't automatically page up/down when scrolling
 (setq scroll-preserve-screen-position t)
 
+; Use aspell instead of ispell
+(setq ispell-program-name "aspell")
+(setq ispell-list-command "list")
+
 ; Python mode
 (load-library "python-mode")
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
