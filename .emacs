@@ -263,8 +263,6 @@
 (global-set-key "\M-&" 'replace-string)
 (global-set-key "\M-#" 'query-replace-regexp)
 (global-set-key "\M-$" 'replace-regexp)
-(global-set-key "\M-p" 'flymake-goto-prev-error)
-(global-set-key "\M-n" 'flymake-goto-next-error)
 (global-set-key "\C-x\C-b" 'electric-buffer-list)
 (global-unset-key "\e[")
 (global-set-key "\eOP" 'help-command)
