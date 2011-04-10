@@ -1,13 +1,21 @@
 import Monad
 import Data.Monoid (All (All))
+import System.IO
 
 import XMonad
+
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.DynamicLog
+
 import XMonad.Layout.NoBorders (smartBorders)
+
 import qualified XMonad.StackSet as W
+
 import XMonad.Util.EZConfig
+import XMonad.Util.Loggers
+import XMonad.Util.Run (spawnPipe)
 
 -- Helper functions to fullscreen the window
 fullFloat :: Window -> X ()
@@ -54,25 +62,33 @@ manageHook' = composeAll
               , className =? "Pidgin" --> doFloat
               ]
 
-dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf \\#dcdccc -sb \\#dcdccc -sf \\#222`"
+dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf " ++
+         "\\#dcdccc -sb \\#dcdccc -sf \\#222`"
 
-main = xmonad $ ewmh $ defaultConfig
-       { handleEventHook = handleEventHook'
-       , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
-       , modMask = modMask'
-       , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
-       , terminal = "urxvtc"
-       }
-       `additionalKeysP`
-       [ ("<XF86AudioPlay>", spawn "quodlibet --play-pause")
-       , ("<XF86AudioStop>", spawn "quodlibet --pause")
-       , ("<XF86AudioNext>", spawn "quodlibet --next")
-       , ("<XF86AudioPrev>", spawn "quodlibet --previous")
-       , ("<XF86AudioLowerVolume>", spawn "amixer set Master 2dB- unmute")
-       , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 2dB+ unmute")
-       , ("<XF86AudioMute>", spawn "amixer set Master toggle")
-       , ("M-p", spawn dmenu')
-       , ("M-s", spawn "quodlibet --previous")
-       , ("M-d", spawn "quodlibet --play-pause")
-       , ("M-f", spawn "quodlibet --next")
-       ]
+config' = defaultConfig
+          { handleEventHook = handleEventHook'
+          , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
+          , modMask = modMask'
+          , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
+          , terminal = "urxvtc"
+          }
+          `additionalKeysP`
+          [ ("<XF86AudioPlay>", spawn "quodlibet --play-pause")
+          , ("<XF86AudioStop>", spawn "quodlibet --pause")
+          , ("<XF86AudioNext>", spawn "quodlibet --next")
+          , ("<XF86AudioPrev>", spawn "quodlibet --previous")
+          , ("<XF86AudioLowerVolume>", spawn "amixer set Master 2dB- unmute")
+          , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 2dB+ unmute")
+          , ("<XF86AudioMute>", spawn "amixer set Master toggle")
+          , ("M-p", spawn dmenu')
+          , ("M-s", spawn "quodlibet --previous")
+          , ("M-d", spawn "quodlibet --play-pause")
+          , ("M-f", spawn "quodlibet --next")
+          ]
+
+pp' = defaultPP { ppLayout = \_ -> ""
+                }
+
+toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+
+main = xmonad =<< statusBar "xmobar" pp' toggleStrutsKey config'

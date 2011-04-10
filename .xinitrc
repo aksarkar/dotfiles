@@ -46,7 +46,4 @@ eval `cat $HOME/.fehbg` &
 # wicd
 wicd-client &
 
-# pypanel
-(sleep 5 && pypanel) &
-
 exec xmonad
