@@ -4,10 +4,11 @@ import System.IO
 
 import XMonad
 
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
-import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.UrgencyHook
 
 import XMonad.Layout.NoBorders (smartBorders)
 
@@ -65,7 +66,7 @@ manageHook' = composeAll
 dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf " ++
          "\\#dcdccc -sb \\#dcdccc -sf \\#222`"
 
-config' = defaultConfig
+config' = withUrgencyHook NoUrgencyHook $ defaultConfig
           { handleEventHook = handleEventHook'
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
           , modMask = modMask'
@@ -87,6 +88,7 @@ config' = defaultConfig
           ]
 
 pp' = defaultPP { ppLayout = \_ -> ""
+                , ppUrgent = wrap "" "*"
                 }
 
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
