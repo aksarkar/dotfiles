@@ -294,8 +294,7 @@
  '(git-uptodate-face ((((class color) (background dark)) (:inherit font-lock-comment))))
  '(js2-warning-face ((t (:inherit font-lock-warning))))
  '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) (:background "#3f3f3f"))))
- '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) (:background "#303030"))))
- '(tuareg-font-lock-governing ((t (:inherit font-lock-keyword)))))
+ '(mumamo-background-chunk-submode ((((class color) (min-colors 88) (background dark)) (:background "#303030")))))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
