@@ -87,7 +87,8 @@ config' = withUrgencyHook NoUrgencyHook $ defaultConfig
           , ("M-f", spawn "quodlibet --next")
           ]
 
-pp' = defaultPP { ppLayout = \_ -> ""
+pp' = defaultPP { ppVisible = wrap "(" ")"
+                , ppLayout = \_ -> ""
                 , ppUrgent = wrap "" "*"
                 }
 
