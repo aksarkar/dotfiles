@@ -1,11 +1,10 @@
 import Monad
-import Data.Monoid (All (All))
+import Data.Monoid
 import System.IO
 
 import XMonad
 
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.UrgencyHook
@@ -26,22 +25,16 @@ fullFloat w = windows $ W.float w r
 tileWin :: Window -> X ()
 tileWin w = windows $ W.sink w
 
-handleEventHook' :: Event -> X All
-handleEventHook' (ClientMessageEvent _ _ _ dpy win typ dat) = do
+fullScreenEventHook :: Event -> X All
+fullScreenEventHook (ClientMessageEvent _ _ _ dpy win typ dat) = do
   state <- getAtom "_NET_WM_STATE"
   fullsc <- getAtom "_NET_WM_STATE_FULLSCREEN"
   isFull <- runQuery isFullscreen win
-
-  -- Constants for the _NET_WM_STATE protocol
-  let remove = 0
+  let remove = 0  -- Constants for the _NET_WM_STATE protocol
       add = 1
       toggle = 2
-
-      -- The ATOM property type for changeProperty
-      ptype = 4 
-
+      ptype = 4  -- The ATOM property type for changeProperty
       action = head dat
-
   when (typ == state && (fromIntegral fullsc) `elem` tail dat) $ do
     when (action == add || (action == toggle && not isFull)) $ do
          io $ changeProperty32 dpy win state ptype propModeReplace 
@@ -50,11 +43,11 @@ handleEventHook' (ClientMessageEvent _ _ _ dpy win typ dat) = do
     when (head dat == remove || (action == toggle && isFull)) $ do
          io $ changeProperty32 dpy win state ptype propModeReplace []
          tileWin win
-
   -- It shouldn't be necessary for xmonad to do anything more with this event
   return $ All False
+fullScreenEventHook _ = return $ All True
 
-handleEventHook' _ = return $ All True
+handleEventHook' = fullScreenEventHook
 
 modMask' = mod4Mask
 
@@ -66,7 +59,7 @@ manageHook' = composeAll
 dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf " ++
          "\\#dcdccc -sb \\#dcdccc -sf \\#222`"
 
-config' = withUrgencyHook NoUrgencyHook $ defaultConfig
+config' = withUrgencyHook NoUrgencyHook defaultConfig
           { handleEventHook = handleEventHook'
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
           , modMask = modMask'
