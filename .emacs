@@ -1,5 +1,7 @@
 ; Local elisp directory
-(add-to-list 'load-path "~/.lisp/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+(let ((default-directory "~/.emacs.d/lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 ; Zenburn color scheme
 (require 'color-theme)
@@ -29,8 +31,8 @@
 ; Stop forcing me to spell out "yes"
 (fset 'yes-or-no-p 'y-or-n-p) 
 
-; Stop leaving backup~ files scattered everywhere
-(setq backup-directory-alist '(("." . "~/.emacs-backups"))) 
+; Put backups and autosaves in one place
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups/")))
 
 ; Remove superfluous GUI
 (scroll-bar-mode -1)
@@ -134,7 +136,7 @@
 (setq tramp-default-method "ssh")
 
 ; Haskell mode
-(load "~/.lisp/haskell-mode/haskell-site-file")
+(load "~/.emacs.d/lisp/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'haskell-indent-mode)
 (add-hook 'haskell-mode-hook 'font-lock-mode)
@@ -147,7 +149,6 @@
 
 ; git
 (require 'git)
-(add-to-list 'load-path "~/.lisp/gitsum")
 (require 'gitsum)
 
 ; Compile the current Java buffer
