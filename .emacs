@@ -123,12 +123,6 @@
 (load-library "python-mode")
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
-; nXhtml mode
-(load "~/.lisp/nxhtml/autostart.el")
-
-; PHP mode
-(require 'php-mode)
-
 ; js2 (Javascript) mode
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -142,12 +136,6 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'haskell-indent-mode)
 (add-hook 'haskell-mode-hook 'font-lock-mode)
-
-; Tuareg mode (OCaml)
-(add-to-list 'load-path "~/.lisp/tuareg-mode")
-(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
 
 ; git
 (require 'git)
