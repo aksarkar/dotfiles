@@ -183,14 +183,10 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(asm-comment-char 35)
- '(c-basic-offset 4)
  '(js2-basic-offset 4)
  '(js2-mode-indent-ignore-first-tab t)
  '(max-lisp-eval-depth 4096)
  '(max-specpdl-size 10000)
- '(mumamo-chunk-coloring (quote submode-colored))
- '(nxhtml-skip-welcome t)
  '(py-python-command "python2")
  '(python-python-command "python2")
  '(sentence-end-double-space nil)
