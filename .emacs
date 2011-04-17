@@ -158,16 +158,6 @@
 (global-set-key "\M-#" 'query-replace-regexp)
 (global-set-key "\M-$" 'replace-regexp)
 (global-set-key "\C-x\C-b" 'electric-buffer-list)
-(global-unset-key "\e[")
-(global-set-key "\eOP" 'help-command)
-(global-set-key "\e[C" 'forward-char)
-(global-set-key "\e[D" 'backward-char)
-(global-set-key "\e[A" 'previous-line)
-(global-set-key "\e[B" 'next-line)
-(global-set-key "\eOv" 'forward-char)
-(global-set-key "\eOt" 'backward-char)
-(global-set-key "\eOx" 'previous-line)
-(global-set-key "\eOr" 'next-line)
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
