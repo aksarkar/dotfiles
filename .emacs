@@ -3,10 +3,12 @@
 (let ((default-directory "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-; Zenburn color scheme
+; Color themes
 (require 'color-theme)
-(require 'zenburn)
-(color-theme-zenburn)
+(require 'color-theme-solarized)
+
+; Solarized color theme
+(color-theme-solarized-light)
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
