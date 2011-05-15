@@ -3,6 +3,8 @@ define_webjump("mail", "https://gmail.com");
 define_webjump("reader", "http://google.com/reader");
 define_webjump("calendar", "http://google.com/calendar");
 define_webjump("maps", "http://maps.google.com/?q=%s");
+define_webjump("youtube", "http://www.youtube.com/results?search_query=%s",
+               $alternative = "http://www.youtube.com");
 define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 
 // Frequently read
