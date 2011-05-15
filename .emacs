@@ -28,7 +28,6 @@
 
 ; Auto fill lines
 (setq-default fill-column 79)
-(auto-fill-mode)
 
 ; Stop forcing me to spell out "yes"
 (fset 'yes-or-no-p 'y-or-n-p) 
@@ -97,8 +96,8 @@
 	      mode-line-buffer-identification " "
 	      global-mode-string " ("
 	      mode-name mode-line-process minor-mode-alist "%n" ")-"
-	      (which-func-mode
-	       ("" which-func-format "-")) (-3 . "%p") "-%-")))
+	      (which-func-mode ("" which-func-format "-"))
+          (-3 . "%p") "-%-")))
 
 ; Always display line number
 (setq line-number-display-limit nil)
@@ -120,12 +119,12 @@
 (setq ispell-list-command "list")
 
 ; Python mode
-(load-library "python-mode")
+(require 'python-mode)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 ; js2 (Javascript) mode
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq js2-use-font-lock-faces t)
 
 ; TRAMP mode
@@ -136,6 +135,9 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'font-lock-mode)
+
+; Wikipedia mode
+(require 'wikipedia-mode)
 
 ; git
 (require 'git)
