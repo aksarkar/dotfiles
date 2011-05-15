@@ -152,6 +152,34 @@
           (lambda ()
             (local-set-key "\C-c\C-c" 'javac-current)))
 
+; rcirc
+(defun rcirc-urgency-hint (process sender response target text)
+  (let ((frame (selected-frame)))
+    (when (and (eq (framep frame) 'x)   ; Only X11 frames
+               (not (string= (rcirc-nick process) sender))
+               (not (string= (rcirc-server-name process) sender))
+               (string= response "PRIVMSG")
+               (or (string-match (rcirc-nick process) text) ; hl
+                   (not (string-match "^[&#]" target))))    ; query
+      (let* ((wm-hints (append (x-window-property
+                                "WM_HINTS" frame "WM_HINTS"
+                                (string-to-number
+                                 (frame-parameter frame 'outer-window-id))
+                                nil t) nil))
+             (flags (car wm-hints)))
+        (setcar wm-hints (logior flags #x00000100))
+        (x-change-window-property "WM_HINTS" wm-hints frame "WM_HINTS" 32 t)))))
+(add-hook 'rcirc-print-hooks 'rcirc-urgency-hint)
+
+(setq rcirc-server-alist
+      '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
+        ("irc.freenode.net" :channels ("#archlinux" "#emacs" "#xmonad"
+                                       "#python"))))
+(setq rcirc-default-full-name "A. Sarkar")
+(setq rcirc-fill-prefix "      ")
+(setq rcirc-time-format "%H:%M ")
+(rcirc-track-minor-mode t)
+
 ; Key bindings
 (global-set-key "\C-z" 'undo)  ; Use C-z for undo instead of minimize
 (global-set-key "\M-r" 'isearch-backward-regexp)
@@ -185,6 +213,8 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(browse-url-browser-function (quote browse-url-generic))
+ '(browse-url-generic-program "conkeror")
  '(js2-basic-offset 4)
  '(js2-mode-indent-ignore-first-tab t)
  '(max-lisp-eval-depth 4096)
