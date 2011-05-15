@@ -3,12 +3,6 @@
 # Local resources
 xrdb -merge .Xresources
 
-# xmodmap
-# xmodmap .Xmodmap
-
-# Sound
-# alsactl restore &
-
 # Emacs daemon
 emacs --daemon &
 
@@ -32,18 +26,12 @@ setxkbmap -option compose:ralt
 xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
 
 # Set the cursor
-xsetroot -cursor_name left_ptr &
+xsetroot -cursor_name left_ptr
 
 # Openoffice quickstarter
 soffice -quickstart -nodefault -nologo &
 
-# Battery monitor
-batterymon &
-
 # Restore background
 eval `cat $HOME/.fehbg` &
-
-# wicd
-wicd-client &
 
 exec xmonad
