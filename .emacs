@@ -158,7 +158,6 @@
     (when (and (eq (framep frame) 'x)   ; Only X11 frames
                (not (string= (rcirc-nick process) sender))
                (not (string= (rcirc-server-name process) sender))
-               (string= response "PRIVMSG")
                (or (string-match (rcirc-nick process) text) ; hl
                    (not (string-match "^[&#]" target))))    ; query
       (let* ((wm-hints (append (x-window-property
@@ -169,12 +168,20 @@
              (flags (car wm-hints)))
         (setcar wm-hints (logior flags #x00000100))
         (x-change-window-property "WM_HINTS" wm-hints frame "WM_HINTS" 32 t)))))
+(defun rcirc-bell (process sender response target text)
+  (let ((frame (selected-frame)))
+    (when (and (not window-system)  ; only terminal
+               (not (string= (rcirc-nick process) sender))
+               (not (string= (rcirc-server-name process) sender))
+               (or (string-match (rcirc-nick process) text) ; hl
+                   (not (string-match "^[&#]" target))))    ; query
+      (send-string-to-terminal "^G"))))
+
 (add-hook 'rcirc-print-hooks 'rcirc-urgency-hint)
+(add-hook 'rcirc-print-hooks 'rcirc-bell)
 
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
-        ("irc.freenode.net" :channels ("#archlinux" "#emacs" "#xmonad"
-                                       "#python"))))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
