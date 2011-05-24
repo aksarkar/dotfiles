@@ -181,7 +181,7 @@
 (add-hook 'rcirc-print-hooks 'rcirc-bell)
 
 (setq rcirc-server-alist
-      '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
+      '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
