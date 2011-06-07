@@ -21,12 +21,9 @@ define_webjump("twitter", "https://twitter.com");
 define_webjump("facebook", "https://facebook.com");
 
 // School stuff
-define_webjump("blackboard", "https://blackboard.unc.edu/webapps/login/");
 define_webjump("compgenwiki",
                "http://compgen.unc.edu/wiki/index.php/Special:Search?search=%s",
                $alternative = "http://compgen.unc.edu/wiki");
-define_webjump("431 ", "http://www.cs.unc.edu/~jeffay/courses/comp431/");
-define_webjump("790 ", "http://cs.unc.edu/Courses/comp790-090-s11/");
 
 // Useful lookups
 define_webjump("archwiki", 
