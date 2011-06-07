@@ -29,7 +29,7 @@ xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
 xsetroot -cursor_name left_ptr
 
 # Openoffice quickstarter
-soffice -quickstart -nodefault -nologo &
+soffice --quickstart --nodefault --nologo &
 
 # Restore background
 eval `cat $HOME/.fehbg` &
