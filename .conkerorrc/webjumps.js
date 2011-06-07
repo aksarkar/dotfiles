@@ -1,4 +1,5 @@
 // Frequently used Google apps
+define_webjump("image", "http://images.google.com/images?q=%s");
 define_webjump("mail", "https://gmail.com");
 define_webjump("reader", "http://google.com/reader");
 define_webjump("calendar", "http://google.com/calendar");
