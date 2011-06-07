@@ -39,6 +39,9 @@ define_webjump("emacswiki",
 define_webjump("javadoc",
                "http://www.google.com/search?q=%s " +
                "site=download.oracle.com/javase/6/docs/api");
+define_webjump("pydoc",
+               "http://docs.python.org/py3k/search.html?q=%s",
+               $alternative="http://docs.python.org/py3k");
 define_webjump("conkerorwiki",
                "http://conkeror.org/?action=fullsearch&context=60" +
                "&value=%s&fullsearch=Text",
