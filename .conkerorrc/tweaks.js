@@ -25,5 +25,8 @@ hints_display_url_panel = true;
 editor_shell_command = "emacsclient -c";
 view_source_use_external_editor = true;
 
+// Noscript convenience functions
+require("noscript");
+
 // Page modes
 require("page-modes/gmail.js");
