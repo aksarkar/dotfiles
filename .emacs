@@ -153,6 +153,7 @@
             (local-set-key "\C-c\C-c" 'javac-current)))
 
 ; rcirc
+(require 'rcirc-controls)
 (defun rcirc-urgency-hint (process sender response target text)
   (let ((frame (selected-frame)))
     (when (and (eq (framep frame) 'x)   ; Only X11 frames
@@ -176,8 +177,9 @@
                (or (string-match (rcirc-nick process) text) ; hl
                    (not (string-match "^[&#]" target))))    ; query
       (send-string-to-terminal "^G"))))
- ;;; Minimal logging to `~/.rcirc-logs/channel'
- ;;; by courtesy of Trent Buck.
+
+; Minimal logging to `~/.rcirc-logs/channel'
+; by courtesy of Trent Buck.
 (defun rcirc-write-log (process sender response target text)
   (when rcirc-log-directory
     (with-temp-buffer
@@ -209,6 +211,12 @@
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
+
+(add-hook 'rcirc-mode-hook 
+          '(lambda()
+             (rcirc-track-minor-mode 1)
+             (rcirc-omit-mode)
+             (flyspell-mode 1)))
 
 ; Key bindings
 (global-set-key "\C-z" 'undo)  ; Use C-z for undo instead of minimize
