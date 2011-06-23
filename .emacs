@@ -244,7 +244,8 @@
  '(git-unknown-face ((t nil)))
  '(git-unmerged-face ((t (:inherit font-lock-warning))))
  '(git-uptodate-face ((t (:inherit font-lock-comment))))
- '(js2-warning-face ((t (:inherit font-lock-warning)))))
+ '(js2-warning-face ((t (:inherit font-lock-warning))))
+ '(variable-pitch ((t (:family "Segoe UI")))))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -259,5 +260,7 @@
  '(max-specpdl-size 10000)
  '(py-python-command "python2")
  '(python-python-command "python2")
+ '(rcirc-omit-threshold 0)
  '(sentence-end-double-space nil)
+ '(solarized-degrade nil)
  '(tab-width 4))
