@@ -36,6 +36,9 @@ define_webjump("emacswiki",
                "http://www.google.com/cse?cx=004774160799092323420%3A6-ff2s0o6yi" +
                "&q=%s&sa=Search&siteurl=emacswiki.org%2F",
                $alternative="http://www.emacswiki.org/");
+define_webjump("ggplot2",
+               "http://www.google.com/cse?cx=001874040508206079260%3Azzkysoltlo0&ie=UTF-8&q=%s",
+               $alternative="http://had.co.nz/ggplot2/");
 define_webjump("javadoc",
                "http://www.google.com/search?q=%s " +
                "site=download.oracle.com/javase/6/docs/api");
