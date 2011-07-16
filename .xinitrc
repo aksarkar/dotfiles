@@ -20,8 +20,14 @@ xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
 xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
 
 # Keyboard stuff
-setxkbmap -option ctrl:swapcaps
-setxkbmap -option compose:ralt
+kb1=$(xinput list | grep "AT" | sed -re "s/.*id=([0-9]+).*/\1/")
+kb2=$(xinput list | grep "Topre" | sed -re "s/.*id=([0-9]+).*/\1/")
+setxkbmap -device $kb1 -option ctrl:swapcaps
+setxkbmap -device $kb1 -option compose:ralt
+if [ ! -z $kb2]
+then
+    setxkbmap -device $kb2 -option compose:ralt
+fi
 
 # Disable TouchPad
 xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
