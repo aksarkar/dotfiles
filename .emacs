@@ -177,37 +177,12 @@
                (or (string-match (rcirc-nick process) text) ; hl
                    (not (string-match "^[&#]" target))))    ; query
       (send-string-to-terminal "^G"))))
-
-; Minimal logging to `~/.rcirc-logs/channel'
-; by courtesy of Trent Buck.
-(defun rcirc-write-log (process sender response target text)
-  (when rcirc-log-directory
-    (with-temp-buffer
-      ;; Sometimes TARGET is a buffer :-(
-      (when (bufferp target)
-        (setq target (with-current-buffer buffer rcirc-target)))
-
-      ;; Sometimes buffer is not anything at all!
-      (unless (or (null target) (string= target ""))
-        ;; Print the line into the temp buffer.
-        (insert (format-time-string "%Y-%m-%d %H:%M "))
-        (insert (format "%-16s " (rcirc-user-nick sender)))
-        (unless (string= response "PRIVMSG")
-          (insert "/" (downcase response) " "))
-        (insert text "\n")
-
-        ;; Append the line to the appropriate logfile.
-        (let ((coding-system-for-write 'no-conversion))
-          (write-region (point-min) (point-max)
-                        (concat rcirc-log-directory "/" (downcase target))
-                        t 'quietly))))))
 (add-hook 'rcirc-print-hooks 'rcirc-urgency-hint)
 (add-hook 'rcirc-print-hooks 'rcirc-bell)
-(add-hook 'rcirc-print-hooks 'rcirc-write-log)
 
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
-        ("localhost" :channels ("&bitlbee"))))
+        ("im.bitlbee.org" :channels ("&bitlbee"))))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
@@ -263,4 +238,5 @@
  '(rcirc-omit-threshold 0)
  '(sentence-end-double-space nil)
  '(solarized-degrade nil)
+ '(solarized-termcolors 16)
  '(tab-width 4))
