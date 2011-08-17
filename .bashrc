@@ -7,14 +7,18 @@ stty -ctlecho
 alias ls='ls -F --color=always'
 alias la='ls -a'
 alias grep='grep --color=auto'
-alias ml='make -f /usr/local/include/makefiles/Makefile.LATEX '
 
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
 export BROWSER='conkeror'
 export EDITOR='emacsclient -c'
-export INFOPATH=/usr/local/info:/usr/share/info
-export MAILDIR=$HOME/mail
+export PATH=$HOME/.local/bin:$PATH
+export PYTHONPATH=$HOME/.local/lib/python
 export TERM='xterm-256color'
 export VISUAL=$EDITOR
+
+use -q GCC-4.4
+use -q LSF
+use -q Python-3.1
+use -q R-2.12
