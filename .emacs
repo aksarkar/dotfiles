@@ -182,6 +182,7 @@
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
         ("im.bitlbee.org" :channels ("&bitlbee"))))
+(load "~/.emacs.d/lisp/my-rcirc-auth.el")
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
@@ -234,6 +235,7 @@
  '(max-specpdl-size 10000)
  '(py-python-command "python2")
  '(python-python-command "python2")
+ '(rcirc-buffer-maximum-lines 500)
  '(rcirc-omit-threshold 0)
  '(sentence-end-double-space nil)
  '(solarized-degrade nil)
