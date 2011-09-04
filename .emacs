@@ -114,9 +114,8 @@
 ; Don't automatically page up/down when scrolling
 (setq scroll-preserve-screen-position t)
 
-; Use aspell instead of ispell
-(setq ispell-program-name "aspell")
-(setq ispell-list-command "list")
+; Use hunspell instead of ispell
+(setq ispell-program-name "hunspell")
 
 ; Python mode
 (require 'python-mode)
