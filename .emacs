@@ -193,34 +193,16 @@
              (rcirc-omit-mode)
              (flyspell-mode 1)))
 
-; Key bindings
-(global-set-key "\C-z" 'undo)  ; Use C-z for undo instead of minimize
-(global-set-key "\M-r" 'isearch-backward-regexp)
-(global-set-key "\M-s" 'isearch-forward-regexp)
-(global-set-key "\M-&" 'replace-string)
-(global-set-key "\M-#" 'query-replace-regexp)
-(global-set-key "\M-$" 'replace-regexp)
-(global-set-key "\C-x\C-b" 'electric-buffer-list)
+; ibuffer
+(setq ibuffer-display-summary nil)
 
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(flymake-errline ((t (:inherit font-lock-warning))))
- '(flymake-warnline ((t (:inherit font-lock-warning))))
- '(font-wikipedia-bold-face ((t (:inherit bold))))
- '(font-wikipedia-italic-face ((t (:inherit italic))))
- '(font-wikipedia-math-face ((t (:inherit font-lock-string-face))))
- '(font-wikipedia-string-face ((t (:inherit font-lock-string-face))))
- '(font-wikipedia-verbatim-face ((t (:inherit font-lock-keyword-face))))
- '(font-wikipedia-warning-face ((t (:inherit font-lock-warning))))
- '(git-status-face ((t (:inherit font-lock-warning-face))))
- '(git-unknown-face ((t nil)))
- '(git-unmerged-face ((t (:inherit font-lock-warning))))
- '(git-uptodate-face ((t (:inherit font-lock-comment))))
- '(js2-warning-face ((t (:inherit font-lock-warning))))
- '(variable-pitch ((t (:family "Segoe UI")))))
+; Key bindings
+(global-set-key "\C-z" 'undo)
+(global-set-key "\C-r" 'isearch-backward-regexp)
+(global-set-key "\C-s" 'isearch-forward-regexp)
+(global-set-key "\M-%" 'query-replace-regexp)
+(global-set-key "\M-&" 'replace-regexp)
+(global-set-key "\C-x\C-b" 'ibuffer-other-window)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
