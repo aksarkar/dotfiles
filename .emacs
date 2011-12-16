@@ -121,7 +121,7 @@
 
 ; Python mode
 (require 'python-mode)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python3-mode))
 
 ; js2 (Javascript) mode
 (require 'js2-mode)
@@ -217,11 +217,15 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(max-lisp-eval-depth 4096)
  '(max-specpdl-size 10000)
- '(py-python-command "python2")
- '(python-python-command "python2")
- '(rcirc-buffer-maximum-lines 500)
- '(rcirc-omit-threshold 0)
+ '(py-python-command "python")
+ '(python-python-command "python")
  '(sentence-end-double-space nil)
  '(solarized-degrade nil)
  '(solarized-termcolors 16)
  '(tab-width 4))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
