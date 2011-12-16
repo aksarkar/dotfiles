@@ -1,6 +1,6 @@
 // Frequently used Google apps
 define_webjump("image", "http://images.google.com/images?q=%s");
-define_webjump("mail", "https://gmail.com");
+define_webjump("mail", "https://mail.google.com");
 define_webjump("reader", "http://google.com/reader");
 define_webjump("calendar", "http://google.com/calendar");
 define_webjump("maps", "http://maps.google.com/?q=%s");
@@ -12,16 +12,18 @@ define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 define_webjump("hacker_news", 
                "http://www.google.com/search?q=site:news.ycombinator.com+%s",
                $alternative = "http://news.ycombinator.com/");
-define_webjump("nytimes", "http://nytimes.com");
-define_webjump("guardian", "http://guardian.co.uk");
+define_webjump("nytimes", "http://www.nytimes.com");
+define_webjump("guardian", "http://www.guardiannews.com");
+define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge");
 define_webjump("xkcd", "http://m.xkcd.com");
 
 // Social networks
 define_webjump("github", "https://github.com");
-define_webjump("twitter", "https://twitter.com");
-define_webjump("facebook", "https://facebook.com");
+define_webjump("facebook", "https://www.facebook.com");
 
 // School stuff
+define_webjump("6.854", "http://courses.csail.mit.edu/6.854/current/");
+define_webjump("6.878", "http://compbio.mit.edu/6.047");
 define_webjump("compgenwiki",
                "http://compgen.unc.edu/wiki/index.php/Special:Search?search=%s",
                $alternative = "http://compgen.unc.edu/wiki");
