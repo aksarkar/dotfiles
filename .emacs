@@ -188,12 +188,24 @@
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
+(setq rcirc-buffer-maximum-lines 500)
+(setq rcirc-omit-threshold 0)
 
 (add-hook 'rcirc-mode-hook 
           '(lambda()
              (rcirc-track-minor-mode 1)
              (rcirc-omit-mode)
              (flyspell-mode 1)))
+
+(defun rcirc-mode-p (buffer-name)
+  (eq (buffer-local-value 'major-mode (get-buffer buffer-name)) 'rcirc-mode))
+
+(defun rcirc-track-clear-activity ()
+  (interactive)
+  (mapc 'rcirc-clear-activity
+        (remove-if-not 'rcirc-mode-p (buffer-list)))
+  (rcirc-update-activity-string)
+  (force-mode-line-update t))
 
 ; ibuffer
 (setq ibuffer-display-summary nil)
