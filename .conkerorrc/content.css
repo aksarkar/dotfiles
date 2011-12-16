@@ -25,6 +25,9 @@ font {
     body * {
         font-family: sans-serif !important;
     }
+    .comment {
+        color: #333 !important;
+    }
     .title, .comhead, .default, .comment {
         font-size: 12pt !important; 
         line-height:1.2 !important
