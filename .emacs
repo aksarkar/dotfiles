@@ -77,12 +77,14 @@
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
-; Run XeLaTeX from tex-compile
 (add-hook 'tex-mode-hook
           '(lambda()
+             ; Run XeLaTeX from tex-compile
              (add-to-list 'tex-compile-commands 
                           '("xelatex --papersize=letter %r" 
-                            "%r.tex" "%r.pdf"))))
+                            "%r.tex" "%r.pdf"))
+             (flyspell-mode 1)
+             (auto-fill-mode 1)))
 
 ; Modeline
 (setq display-time-day-and-date nil)
