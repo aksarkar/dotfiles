@@ -216,7 +216,7 @@
 (global-set-key "\C-s" 'isearch-forward-regexp)
 (global-set-key "\M-%" 'query-replace-regexp)
 (global-set-key "\M-&" 'replace-regexp)
-(global-set-key "\C-x\C-b" 'ibuffer-other-window)
+(global-set-key "\C-x\C-b" 'ibuffer)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
