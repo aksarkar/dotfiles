@@ -2,5 +2,5 @@
 ao=alsa
 vo=xv
 cache=8192
-cache-min=10
+cache-min=20
 prefer-ipv4=true
