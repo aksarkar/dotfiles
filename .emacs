@@ -209,6 +209,15 @@
 
 ; ibuffer
 (setq ibuffer-display-summary nil)
+(setq ibuffer-default-sorting-mode 'alphabetic)
+(setq ibuffer-saved-filter-groups
+      (quote (("default"
+               ("irc" (mode . rcirc-mode))
+               ("git" (name . "^\\*git.*\\*$"))
+               ("emacs" (name . "^\\*.*\\*$"))))))
+(add-hook 'ibuffer-mode-hook
+          (lambda ()
+            (ibuffer-switch-to-saved-filter-groups "default")))
 
 ; Key bindings
 (global-set-key "\C-z" 'undo)
