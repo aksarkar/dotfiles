@@ -181,6 +181,13 @@
 (add-hook 'rcirc-print-hooks 'rcirc-urgency-hint)
 (add-hook 'rcirc-print-hooks 'rcirc-bell)
 
+(defadvice rcirc-format-response-string (after dim-entire-line)
+  "Dim whole line for senders whose nick matches `rcirc-dim-nicks'."
+  (when (and rcirc-dim-nicks sender
+             (string-match (regexp-opt rcirc-dim-nicks 'words) sender))
+    (setq ad-return-value (rcirc-facify ad-return-value 'rcirc-dim-nick))))
+(ad-activate 'rcirc-format-response-string)
+
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
         ("im.bitlbee.org" :channels ("&bitlbee"))))
