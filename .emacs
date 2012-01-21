@@ -225,6 +225,7 @@
 (add-hook 'ibuffer-mode-hook
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default")))
+(setq ibuffer-show-empty-filter-groups nil)
 
 ; Key bindings
 (global-set-key "\C-z" 'undo)
