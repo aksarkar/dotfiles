@@ -53,7 +53,7 @@ modMask' = mod4Mask
 
 manageHook' = composeAll
               [ isFullscreen --> doFullFloat
-              , className =? "Pidgin" --> doFloat
+              , className =? "mplayer2" --> doFloat
               ]
 
 dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf " ++
