@@ -198,12 +198,15 @@
 (setq rcirc-time-format "%H:%M ")
 (setq rcirc-buffer-maximum-lines 500)
 (setq rcirc-omit-threshold 0)
+(setq rcirc-low-priority-chans '("#xkcd@irc.foonetic.net"))
 
 (add-hook 'rcirc-mode-hook 
           '(lambda()
              (rcirc-track-minor-mode 1)
              (rcirc-omit-mode)
-             (flyspell-mode 1)))
+             (flyspell-mode 1)
+             (if (member (buffer-name) rcirc-low-priority-chans)
+                 (setq rcirc-low-priority-flag t))))
 
 (defun rcirc-mode-p (buffer-name)
   (eq (buffer-local-value 'major-mode (get-buffer buffer-name)) 'rcirc-mode))
