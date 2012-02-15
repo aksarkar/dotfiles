@@ -22,11 +22,8 @@ define_webjump("github", "https://github.com");
 define_webjump("facebook", "https://www.facebook.com");
 
 // School stuff
-define_webjump("6.854", "http://courses.csail.mit.edu/6.854/current/");
-define_webjump("6.878", "http://compbio.mit.edu/6.047");
-define_webjump("compgenwiki",
-               "http://compgen.unc.edu/wiki/index.php/Special:Search?search=%s",
-               $alternative = "http://compgen.unc.edu/wiki");
+define_webjump("6.830", "http://db.csail.mit.edu/6.830/");
+define_webjump("6.851", "http://courses.csail.mit.edu/6.851/spring12/");
 
 // Useful lookups
 define_webjump("archwiki", 
