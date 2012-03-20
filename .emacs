@@ -189,7 +189,7 @@
 (ad-activate 'rcirc-format-response-string)
 
 (setq rcirc-server-alist
-      '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci" "#xkcd-cs"))
+      '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci"))
         ("im.bitlbee.org" :channels ("&bitlbee"))))
 (load "~/.emacs.d/lisp/my-rcirc-auth.el")
 (setq rcirc-dim-nicks '("Bucket" "flyingferret" "billygoat"))
