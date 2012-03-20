@@ -224,11 +224,13 @@
 ; ibuffer
 (setq ibuffer-display-summary nil)
 (setq ibuffer-default-sorting-mode 'alphabetic)
+(setq ibuffer-expert t)
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ("irc" (mode . rcirc-mode))
                ("git" (name . "^\\*git.*\\*$"))
-               ("emacs" (name . "^\\*.*\\*$"))))))
+               ("emacs" (name . "^\\*.*\\*$"))
+               ("simpledb" (filename . "simpledb"))))))
 (add-hook 'ibuffer-mode-hook
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default")))
