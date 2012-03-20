@@ -1,28 +1,28 @@
 // Frequently used Google apps
+define_webjump("calendar", "http://www.google.com/calendar");
 define_webjump("image", "http://images.google.com/images?q=%s");
 define_webjump("mail", "https://mail.google.com");
-define_webjump("reader", "http://google.com/reader");
-define_webjump("calendar", "http://google.com/calendar");
 define_webjump("maps", "http://maps.google.com/?q=%s");
 define_webjump("youtube", "http://www.youtube.com/results?search_query=%s",
                $alternative = "http://www.youtube.com");
 define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 
 // Frequently read
+define_webjump("economist", "http://www.economist.com/");
+define_webjump("guardian", "http://www.guardiannews.com");
 define_webjump("hacker_news", 
                "http://www.google.com/search?q=site:news.ycombinator.com+%s",
-               $alternative = "http://news.ycombinator.com/");
+               $alternative = "https://news.ycombinator.com/");
 define_webjump("nytimes", "http://www.nytimes.com");
-define_webjump("guardian", "http://www.guardiannews.com");
 define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge");
 define_webjump("xkcd", "http://m.xkcd.com");
 
 // Social networks
 define_webjump("github", "https://github.com");
-define_webjump("facebook", "https://www.facebook.com");
 
 // School stuff
 define_webjump("6.830", "http://db.csail.mit.edu/6.830/");
+define_webjump("stellar", "https://stellar.mit.edu/S/course/6/sp12/6.830/index.html");
 define_webjump("6.851", "http://courses.csail.mit.edu/6.851/spring12/");
 
 // Useful lookups
