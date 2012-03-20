@@ -11,6 +11,7 @@ alias ml='make -f /usr/local/include/makefiles/Makefile.LATEX '
 
 PS1='\u@\h:\w\$ '
 
+export PATH=$PATH:$HOME/.local/bin
 export TERM='xterm-256color'
 export ALTERNATE_EDITOR=''
 export EDITOR='emacsclient -c'
