@@ -218,6 +218,9 @@
   (rcirc-update-activity-string)
   (force-mode-line-update t))
 
+(define-key rcirc-mode-map (kbd "C-c C-o") 'rcirc-cmd-oper)
+(define-key rcirc-mode-map (kbd "C-c q") 'rcirc-cmd-quote)
+
 ; ibuffer
 (setq ibuffer-display-summary nil)
 (setq ibuffer-default-sorting-mode 'alphabetic)
