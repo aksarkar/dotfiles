@@ -30,14 +30,14 @@ font {
     }
     .title, .comhead, .default, .comment {
         font-size: 12pt !important; 
-        line-height:1.2 !important
+        line-height: 1.2 !important
     }
     .subtext {
         font-size: 10pt !important; 
         line-height: 1.44 !important
     }
     .default p {
-        margin-top:1.2em !important
+        margin-top: 1.2em !important
     }
 }
 
