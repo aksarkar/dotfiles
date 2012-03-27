@@ -237,7 +237,7 @@
 (setq ibuffer-saved-filter-groups
       (quote (("default"
                ("irc" (mode . rcirc-mode))
-               ("git" (name . "^\\*git.*\\*$"))
+               ("git" (name . "^\\*git.*\\*"))
                ("emacs" (name . "^\\*.*\\*$"))
                ("simpledb" (filename . "simpledb"))))))
 (add-hook 'ibuffer-mode-hook
