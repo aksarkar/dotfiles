@@ -264,9 +264,16 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(max-lisp-eval-depth 4096)
  '(max-specpdl-size 10000)
- '(py-python-command "python")
+ '(py-shell-name "python")
+ '(py-shell-switch-buffers-on-execute nil)
  '(python-python-command "python")
  '(sentence-end-double-space nil)
  '(solarized-degrade nil)
  '(solarized-termcolors 16)
  '(tab-width 4))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
