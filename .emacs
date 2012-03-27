@@ -188,6 +188,15 @@
     (setq ad-return-value (rcirc-facify ad-return-value 'rcirc-dim-nick))))
 (ad-activate 'rcirc-format-response-string)
 
+(defun-rcirc-command prepend (topic)
+  "Prepend to the topic"
+  (interactive "P")
+  (if (and (called-interactively-p 'interactive) topic)
+      (setq topic (read-string "New topic: ")))
+  (when (> (length topic) 0)
+    (rcirc-send-string process (concat "TOPIC " target
+                                       (concat " :" topic " | " rcirc-topic)))))
+
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci"))
         ("im.bitlbee.org" :channels ("&bitlbee"))))
