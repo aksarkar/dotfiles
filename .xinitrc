@@ -4,7 +4,7 @@
 xrdb -merge .Xresources
 
 # Emacs daemon
-emacs --daemon &
+emacs --daemon
 
 # URxvt daemon
 urxvtd &
