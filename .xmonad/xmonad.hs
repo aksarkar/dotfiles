@@ -56,8 +56,8 @@ manageHook' = composeAll
               , className =? "mplayer2" --> doFloat
               ]
 
-dmenu' = "exec `dmenu_path | dmenu -fn Consolas-9:bold -nb \\#222 -nf " ++
-         "\\#dcdccc -sb \\#dcdccc -sf \\#222`"
+dmenu' = "dmenu_run -fn Consolas-9:bold -nb \\#222 -nf " ++
+         "\\#dcdccc -sb \\#dcdccc -sf \\#222"
 
 config' = withUrgencyHook NoUrgencyHook defaultConfig
           { handleEventHook = handleEventHook'
