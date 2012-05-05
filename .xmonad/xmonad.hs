@@ -1,4 +1,4 @@
-import Monad
+import Control.Monad
 import Data.Monoid
 import System.IO
 
