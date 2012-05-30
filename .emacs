@@ -265,15 +265,15 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(max-lisp-eval-depth 4096)
  '(max-specpdl-size 10000)
- '(py-electric-comment-add-space-p t)
+ '(py-electric-comment-add-space-p nil)
  '(py-shell-name "python")
  '(py-shell-switch-buffers-on-execute nil)
+ '(py-shell-switch-buffers-on-execute-p nil)
  '(py-shell-toggle-2 "python2")
  '(py-start-run-py-shell nil)
+ '(py-verbose-p nil)
  '(python-python-command "python")
  '(sentence-end-double-space nil)
- '(solarized-degrade nil)
- '(solarized-termcolors 16)
  '(tab-width 4))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
