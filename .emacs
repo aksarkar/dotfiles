@@ -121,7 +121,7 @@
 
 ; Python mode
 (require 'python-mode)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python3-mode))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 ; js2 (Javascript) mode
 (require 'js2-mode)
