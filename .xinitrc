@@ -38,6 +38,6 @@ xsetroot -cursor_name left_ptr
 eval `cat $HOME/.fehbg` &
 
 # Screen locker
-xautolock -locker "i3lock -c 000000" &
+xautolock -locker "i3lock -c 000000 -u" &
 
 exec xmonad
