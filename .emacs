@@ -201,7 +201,6 @@
       '(("irc.foonetic.net" :channels ("#xkcd" "#xkcd-compsci"))
         ("im.bitlbee.org" :channels ("&bitlbee"))))
 (load "~/.emacs.d/lisp/my-rcirc-auth.el")
-(setq rcirc-dim-nicks '("Bucket" "flyingferret" "billygoat"))
 (setq rcirc-default-full-name "A. Sarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
