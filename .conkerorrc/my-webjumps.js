@@ -21,9 +21,7 @@ define_webjump("xkcd", "http://m.xkcd.com");
 define_webjump("github", "https://github.com");
 
 // School stuff
-define_webjump("6.830", "http://db.csail.mit.edu/6.830/");
-define_webjump("stellar", "https://stellar.mit.edu/S/course/6/sp12/6.830/index.html");
-define_webjump("6.851", "http://courses.csail.mit.edu/6.851/spring12/");
+define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 
 // Useful lookups
 define_webjump("archwiki", 
