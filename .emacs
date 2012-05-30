@@ -208,6 +208,8 @@
 (setq rcirc-omit-threshold 0)
 (setq rcirc-low-priority-chans '("#xkcd@irc.foonetic.net"))
 
+(add-to-list 'rcirc-response-formats '("ACTION" . "* %N %m"))
+
 (add-hook 'rcirc-mode-hook 
           '(lambda()
              (rcirc-track-minor-mode 1)
