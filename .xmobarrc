@@ -3,11 +3,7 @@
 Config { font = "xft:Consolas-9:bold"
        , bgColor = "#222"
        , fgColor = "#dcdccc"
-       , position = Static { xpos = 0
-                           , ypos = 0
-                           , width = 1440
-                           , height = 16
-                           }
+       , position = Top
        , commands = [ Run Date "%a %b %_d %Y %H:%M" "date" 60
                     , Run Battery ["-t", "Batt: <left>%"] 60
                     , Run StdinReader
