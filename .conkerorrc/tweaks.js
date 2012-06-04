@@ -1,6 +1,6 @@
 register_user_stylesheet("file:///home/asarkar/.conkerorrc/content.css");
 
-homepage = "http://mit.edu/aksarkar";
+homepage = "http://mit.edu/aksarkar/www";
 
 can_kill_last_buffer = false;
 
