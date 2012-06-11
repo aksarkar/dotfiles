@@ -216,6 +216,7 @@
 
 (define-key rcirc-mode-map (kbd "C-c C-o") 'rcirc-cmd-oper)
 (define-key rcirc-mode-map (kbd "C-c q") 'rcirc-cmd-quote)
+(define-key rcirc-mode-map (kbd "M-o") 'rcirc-omit-mode)
 
 ; ibuffer
 (setq ibuffer-display-summary nil)
