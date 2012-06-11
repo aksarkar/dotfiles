@@ -3,12 +3,10 @@
 (let ((default-directory "~/.emacs.d/lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-; Color themes
-(require 'color-theme)
-(require 'color-theme-solarized)
-
 ; Solarized color theme
-(color-theme-solarized-light)
+(add-to-list 'custom-theme-load-path 
+             "~/.emacs.d/lisp/emacs-color-theme-solarized")
+(load-theme 'solarized-light t)
 
 ; Get around UNIX selection nonsense
 (setq x-select-enable-clipboard t)
