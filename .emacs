@@ -153,38 +153,25 @@
 
 ; rcirc
 (require 'rcirc-controls)
-(defun rcirc-urgency-hint (process sender response target text)
+(defun rcirc-notify (process sender response target text)
   (let ((frame (selected-frame)))
-    (when (and (eq (framep frame) 'x)   ; Only X11 frames
-               (not (string= (rcirc-nick process) sender))
+    (when (and (not (string= (rcirc-nick process) sender))
                (not (string= (rcirc-server-name process) sender))
-               (or (string-match (rcirc-nick process) text) ; hl
-                   (not (string-match "^[&#]" target))))    ; query
-      (let* ((wm-hints (append (x-window-property
-                                "WM_HINTS" frame "WM_HINTS"
-                                (string-to-number
-                                 (frame-parameter frame 'outer-window-id))
-                                nil t) nil))
-             (flags (car wm-hints)))
-        (setcar wm-hints (logior flags #x00000100))
-        (x-change-window-property "WM_HINTS" wm-hints frame "WM_HINTS" 32 t)))))
-(defun rcirc-bell (process sender response target text)
-  (let ((frame (selected-frame)))
-    (when (and (not window-system)  ; only terminal
-               (not (string= (rcirc-nick process) sender))
-               (not (string= (rcirc-server-name process) sender))
-               (or (string-match (rcirc-nick process) text) ; hl
-                   (not (string-match "^[&#]" target))))    ; query
-      (send-string-to-terminal "^G"))))
-(add-hook 'rcirc-print-hooks 'rcirc-urgency-hint)
-(add-hook 'rcirc-print-hooks 'rcirc-bell)
-
-(defadvice rcirc-format-response-string (after dim-entire-line)
-  "Dim whole line for senders whose nick matches `rcirc-dim-nicks'."
-  (when (and rcirc-dim-nicks sender
-             (string-match (regexp-opt rcirc-dim-nicks 'words) sender))
-    (setq ad-return-value (rcirc-facify ad-return-value 'rcirc-dim-nick))))
-(ad-activate 'rcirc-format-response-string)
+               (or (string-match (rcirc-nick process) text) ; highlight
+                   (and target (not (string-match "^[&#]" target))))) ; query
+      (cond 
+       ((eq (framep frame) 'x)   ; Only X11 frames
+        (let* ((wm-hints (append (x-window-property
+                                  "WM_HINTS" frame "WM_HINTS"
+                                  (string-to-number
+                                   (frame-parameter frame 'outer-window-id))
+                                  nil t) nil))
+               (flags (car wm-hints)))
+          (setcar wm-hints (logior flags #x00000100))
+          (x-change-window-property "WM_HINTS" wm-hints frame "WM_HINTS" 32 t)))
+       ((not window-system)
+        (send-string-to-terminal "^G"))))))
+(add-hook 'rcirc-print-hooks 'rcirc-notify)
 
 (defun-rcirc-command prepend (topic)
   "Prepend to the topic"
