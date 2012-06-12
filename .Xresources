@@ -1,13 +1,14 @@
 ! Emacs
-Emacs.font: Consolas:pixelsize=14
+Emacs.font: Consolas-10.5
 Emacs.geometry: 80x43
+Emacs.pane.menubar.font: Consolas-10.5
 
 ! Xcursor
 Xcursor*theme: Chameleon-Anthracite-Small
 
 ! URxvt
-URxvt.boldFont: xft:Consolas:pixelsize=14:bold
-URxvt.font: xft:Consolas:pixelsize=14
+URxvt.boldFont: xft:Consolas-10.5:bold
+URxvt.font: xft:Consolas-10.5
 URxvt.intensityStyles: false
 URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,selection,matcher
