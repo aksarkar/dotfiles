@@ -184,7 +184,7 @@
 
 (setq rcirc-server-alist
       '(("irc.foonetic.net" :port 6697 :channels ("#xkcd" "#xkcd-compsci")
-         :encryption "tls")
+         :encryption tls)
         ("im.bitlbee.org" :channels ("&bitlbee"))))
 (load "~/.emacs.d/lisp/my-rcirc-auth.el")
 (setq rcirc-default-full-name "A. Sarkar")
