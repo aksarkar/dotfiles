@@ -152,7 +152,20 @@
             (local-set-key "\C-c\C-c" 'javac-current)))
 
 ; rcirc
-(require 'rcirc-controls)
+(require 'rcirc)
+
+(defadvice rcirc-markup-attributes (before rcirc-fix-italics activate)
+  "Fix italic control character"
+  (save-excursion
+    (while (re-search-forward "\C-]" nil t)
+    (replace-match "\C-v"))))
+
+(defun rcirc-strip-colors (&rest ignore)
+  (while (re-search-forward "\C-c\\(\\([0-9][0-9]?,\\)?[0-9][0-9]?\\)?" nil t)
+    (replace-match "")))
+
+(add-to-list 'rcirc-markup-text-functions 'rcirc-strip-colors)
+
 (defun rcirc-notify (process sender response target text)
   (let ((frame (selected-frame)))
     (when (and (not (string= (rcirc-nick process) sender))
@@ -171,6 +184,7 @@
           (x-change-window-property "WM_HINTS" wm-hints frame "WM_HINTS" 32 t)))
        ((not window-system)
         (send-string-to-terminal "^G"))))))
+
 (add-hook 'rcirc-print-hooks 'rcirc-notify)
 
 (defun-rcirc-command prepend (topic)
