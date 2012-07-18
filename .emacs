@@ -206,7 +206,7 @@
 (setq rcirc-time-format "%H:%M ")
 (setq rcirc-buffer-maximum-lines 500)
 (setq rcirc-omit-threshold 0)
-(setq rcirc-low-priority-chans '("#xkcd@irc.foonetic.net"))
+(setq rcirc-low-priority-chans nil)
 
 (add-to-list 'rcirc-response-formats '("ACTION" . "* %N %m"))
 
