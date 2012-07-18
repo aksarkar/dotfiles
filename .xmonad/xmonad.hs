@@ -9,7 +9,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.UrgencyHook
 
-import XMonad.Layout.NoBorders (smartBorders)
+import XMonad.Layout.NoBorders
 
 import qualified XMonad.StackSet as W
 
@@ -65,6 +65,8 @@ config' = withUrgencyHook NoUrgencyHook defaultConfig
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
           , modMask = modMask'
           , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
+          , normalBorderColor = "#fdf6e3"
+          , focusedBorderColor = "#dc322f"
           , terminal = "urxvtc"
           }
           `additionalKeysP`
