@@ -247,6 +247,14 @@
             (ibuffer-switch-to-saved-filter-groups "default")))
 (setq ibuffer-show-empty-filter-groups nil)
 
+; ace-jump-mode
+(require 'ace-jump-mode)
+(global-set-key "\M-m" 'ace-jump-mode)
+
+; expand-region
+(require 'expand-region)
+(global-set-key "\M-h" 'er/expand-region)
+
 ; Key bindings
 (global-set-key "\C-z" 'undo)
 (global-set-key "\C-r" 'isearch-backward-regexp)
