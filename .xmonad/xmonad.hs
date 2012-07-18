@@ -60,7 +60,8 @@ dmenu' = "dmenu_run -fn Consolas-9:bold -nb \\#222 -nf " ++
          "\\#dcdccc -sb \\#dcdccc -sf \\#222"
 
 config' = withUrgencyHook NoUrgencyHook defaultConfig
-          { handleEventHook = handleEventHook'
+          { focusFollowsMouse = False
+          , handleEventHook = handleEventHook'
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
           , modMask = modMask'
           , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
