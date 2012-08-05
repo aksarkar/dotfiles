@@ -1,8 +1,8 @@
 -- -*- mode: Haskell -*-
 
 Config { font = "xft:Consolas-9:bold"
-       , bgColor = "#222"
-       , fgColor = "#dcdccc"
+       , bgColor = "#002b36"
+       , fgColor = "#93a1a1"
        , position = Top
        , commands = [ Run Date "%a %b %_d %Y %H:%M" "date" 60
                     , Run Battery ["-t", "Batt: <left>%"] 60
