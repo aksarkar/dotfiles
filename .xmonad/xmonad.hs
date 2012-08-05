@@ -64,7 +64,7 @@ config' = withUrgencyHook NoUrgencyHook defaultConfig
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
           , modMask = modMask'
           , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
-          , normalBorderColor = "#fdf6e3"
+          , normalBorderColor = "#eee8d5"
           , focusedBorderColor = "#dc322f"
           , terminal = "urxvtc"
           }
