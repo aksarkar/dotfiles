@@ -202,6 +202,7 @@
         ("im.bitlbee.org" :channels ("&bitlbee"))))
 (load "~/.emacs.d/lisp/my-rcirc-auth.el")
 (setq rcirc-default-full-name "A. Sarkar")
+(setq rcirc-default-user-name "asarkar")
 (setq rcirc-fill-prefix "      ")
 (setq rcirc-time-format "%H:%M ")
 (setq rcirc-buffer-maximum-lines 500)
