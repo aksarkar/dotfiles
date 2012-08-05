@@ -22,6 +22,7 @@ define_webjump("github", "https://github.com");
 
 // School stuff
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
+define_webjump("encodewiki", "http://encodewiki.ucsc.edu/");
 
 // Useful lookups
 define_webjump("archwiki", 
