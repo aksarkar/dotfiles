@@ -1,14 +1,15 @@
+#define FONT Consolas-10.5
+
 ! Emacs
-Emacs.font: Consolas-10.5
+Emacs.font: FONT
 Emacs.geometry: 80x43
-Emacs.pane.menubar.font: Consolas-10.5
+Emacs.pane.menubar.font: FONT
 
 ! Xcursor
 Xcursor*theme: Chameleon-Anthracite-Small
 
 ! URxvt
-URxvt.boldFont: xft:Consolas-10.5:bold
-URxvt.font: xft:Consolas-10.5
+URxvt.font: xft:FONT
 URxvt.intensityStyles: false
 URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,selection,matcher
@@ -35,8 +36,13 @@ URxvt.letterSpace: -1
 #define S_cyan #2aa198
 #define S_green #859900
 
+#ifdef SOLARIZED_DARK
+*background: S_base03
+*foreground: S_base0
+#else
 *background: S_base3
 *foreground: S_base00
+#endif
 *cursorColor: S_base1
 
 !! black dark/light
