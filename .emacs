@@ -158,7 +158,7 @@
   "Fix italic control character"
   (save-excursion
     (while (re-search-forward "\C-]" nil t)
-    (replace-match "\C-v"))))
+      (replace-match "\C-v"))))
 
 (defun rcirc-strip-colors (&rest ignore)
   (while (re-search-forward "\C-c\\(\\([0-9][0-9]?,\\)?[0-9][0-9]?\\)?" nil t)
