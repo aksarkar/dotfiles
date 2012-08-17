@@ -47,3 +47,4 @@ define_webjump("conkerorwiki",
                "http://conkeror.org/?action=fullsearch&context=60" +
                "&value=%s&fullsearch=Text",
                $alternative="http://conkeror.org");
+define_webjump("oed", "http://oed.com/search?searchType=dictionary&q=%s");
