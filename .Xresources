@@ -1,3 +1,4 @@
+#define SOLARIZED_LIGHT
 #define FONT Consolas-10.5
 
 ! Emacs
