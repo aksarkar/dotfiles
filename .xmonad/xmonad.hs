@@ -4,6 +4,8 @@ import System.IO
 
 import XMonad
 
+import XMonad.Actions.UpdatePointer
+
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -62,6 +64,7 @@ config' = withUrgencyHook NoUrgencyHook defaultConfig
           { focusFollowsMouse = False
           , handleEventHook = handleEventHook'
           , layoutHook = smartBorders $ avoidStruts $ layoutHook defaultConfig
+          , logHook = updatePointer (Relative 0.5 0.5)
           , modMask = modMask'
           , manageHook = manageHook' <+> manageHook defaultConfig <+> manageDocks
           , normalBorderColor = "#eee8d5"
