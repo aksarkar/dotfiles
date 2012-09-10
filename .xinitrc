@@ -44,6 +44,6 @@ xautolock -locker "i3lock -c 000000 -u" &
 unclutter &
 
 # Thinkpad T410 ICC profile
-xcalib $HOME/.dotfiles/monitor.icc
+xcalib -d :0 $HOME/.dotfiles/t410s.icc
 
 xmonad
