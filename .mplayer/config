@@ -5,3 +5,4 @@ cache=8192
 cache-min=10
 prefer-ipv4=true
 nolirc=true
+font=Rockwell
