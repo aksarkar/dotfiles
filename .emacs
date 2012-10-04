@@ -164,7 +164,12 @@
   (while (re-search-forward "\C-c\\(\\([0-9][0-9]?,\\)?[0-9][0-9]?\\)?" nil t)
     (replace-match "")))
 
+(defun rcirc-strip-flash (&rest ignore)
+  (while (re-search-forward "\C-f" nil t)
+    (replace-match "")))
+
 (add-to-list 'rcirc-markup-text-functions 'rcirc-strip-colors)
+(add-to-list 'rcirc-markup-text-functions 'rcirc-strip-flash)
 
 (defun rcirc-notify (process sender response target text)
   (let ((frame (selected-frame)))
