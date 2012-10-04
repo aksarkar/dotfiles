@@ -23,6 +23,8 @@ define_webjump("github", "https://github.com");
 // School stuff
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 define_webjump("encodewiki", "http://encodewiki.ucsc.edu/");
+define_webjump("6.438", "https://stellar.mit.edu/S/course/6/fa12/6.438/");
+define_webjump("21M.480", "https://stellar.mit.edu/S/course/21M/fa12/21M.480/");
 
 // Useful lookups
 define_webjump("archwiki", 
@@ -35,8 +37,7 @@ define_webjump("emacswiki",
                "&q=%s&sa=Search&siteurl=emacswiki.org%2F",
                $alternative="http://www.emacswiki.org/");
 define_webjump("ggplot2",
-               "http://www.google.com/cse?cx=001874040508206079260%3Azzkysoltlo0&ie=UTF-8&q=%s",
-               $alternative="http://had.co.nz/ggplot2/");
+               "docs.ggplot2.org");
 define_webjump("javadoc",
                "http://www.google.com/search?q=%s " +
                "site=download.oracle.com/javase/6/docs/api");
