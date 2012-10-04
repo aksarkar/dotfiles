@@ -260,6 +260,10 @@
 (require 'expand-region)
 (global-set-key "\M-h" 'er/expand-region)
 
+; uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
 ; Key bindings
 (global-set-key "\C-z" 'undo)
 (global-set-key "\C-r" 'isearch-backward-regexp)
