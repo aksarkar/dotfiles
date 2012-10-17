@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+
+# System xinitrc
+if [[ -d /etc/X11/xinit/xinitrc.d ]]
+then
+    for f in $(find /etc/X11/xinit/xinitrc.d/ -type f -executable)
+    do
+        . $f
+    done
+fi
 
 # Local resources
 xrdb -merge .Xresources
@@ -9,27 +18,21 @@ emacs --daemon
 # URxvt daemon
 urxvtd &
 
-# D-bus
-if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-    eval "$(dbus-launch --sh-syntax --exit-with-session)"
-fi
+# Ultranav configuration
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
+xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
-# Trackpoint scrolling
-xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
-xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
-xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
-
-# Keyboard stuff
+# Keyboard configuration
 kb1=$(xinput list | grep "AT" | sed -re "s/.*id=([0-9]+).*/\1/")
 kb2=$(xinput list | grep "Topre" | sed -re "s/.*id=([0-9]+).*/\1/")
 setxkbmap -device $kb1 -option ctrl:swapcaps
 setxkbmap -device $kb1 -option compose:ralt
-# if [[ ! -z $kb2]]
-#     setxkbmap -device $kb2 -option compose:ralt
-# fi
-
-# Disable TouchPad
-xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
+if [[ ! -z $kb2 ]]
+then
+    setxkbmap -device $kb2 -option compose:ralt
+fi
 
 # Set the cursor
 xsetroot -cursor_name left_ptr
