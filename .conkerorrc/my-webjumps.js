@@ -14,7 +14,7 @@ define_webjump("hacker_news",
                "http://www.google.com/search?q=site:news.ycombinator.com+%s",
                $alternative = "https://news.ycombinator.com/");
 define_webjump("nytimes", "http://www.nytimes.com");
-define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge");
+define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge?sp=KMACAMBR9");
 define_webjump("xkcd", "http://m.xkcd.com");
 
 // Social networks
