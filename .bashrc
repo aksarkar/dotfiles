@@ -13,5 +13,6 @@ PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
 export EDITOR='emacsclient -c'
+export INFOPATH=/usr/local/info:/usr/share/info
 export TERM='xterm-256color'
 export VISUAL='emacsclient -c'
