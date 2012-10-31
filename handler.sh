@@ -3,7 +3,7 @@
 set -e
 set $*
 
-XAUTH="$(ps -C X f | sed -n 's/.*-auth \(.*\)/\1/p')"
+XAUTH="$(ps -C X f | sed -n 's/.*-auth \([a-zA-Z0-9./]*\).*/\1/p')"
 if [[ -z $XAUTH ]]
 then
     # if XAUTH is blank try another way to get it 
