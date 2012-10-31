@@ -1,3 +1,6 @@
 [user]
 name = Abhishek Sarkar
 email = aksarkar@mit.edu
+
+[push]
+default = current
