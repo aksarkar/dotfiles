@@ -22,7 +22,7 @@ function lock {
 }
 
 function setbg {
-    eval $(cat /home/asarkar/.fehbg)
+    sudo -u asarkar bash -c 'eval $(cat $HOME/.fehbg)'
 }
 
 function dock {
