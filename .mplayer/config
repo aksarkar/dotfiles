@@ -1,8 +1,7 @@
-# Write your default config options here!
 ao=alsa
 vo=xv
 cache=8192
 cache-min=10
 prefer-ipv4=true
 nolirc=true
-font=Rockwell
+font="Segoe UI"
