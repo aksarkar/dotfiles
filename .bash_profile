@@ -1,4 +1,2 @@
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-  . startx
-  logout
-fi
+eval `$HOME/.local/bin/keychain -q --nocolor --eval $HOME/.ssh/id_rsa`
+screen -D -RR
