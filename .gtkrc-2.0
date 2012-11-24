@@ -1,0 +1,4 @@
+include "/home/asarkar/.themes/AlunDark/gtk-2.0/gtkrc"
+gtk-font-name="Segoe UI 7"
+gtk-cursor-blink = 0
+gtk-key-theme-name = "Emacs"
