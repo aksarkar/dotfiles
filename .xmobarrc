@@ -1,6 +1,6 @@
 -- -*- mode: Haskell -*-
 
-Config { font = "xft:Consolas-9:bold"
+Config { font = "xft:Consolas-7:bold"
        , bgColor = "#002b36"
        , fgColor = "#93a1a1"
        , position = Top

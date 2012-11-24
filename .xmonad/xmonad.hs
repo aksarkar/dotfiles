@@ -58,7 +58,7 @@ manageHook' = composeAll
               , className =? "mplayer2" --> doFloat
               ]
 
-dmenu' = "dmenu_run -fn Consolas-9:bold -nb \\#002b36 -nf \\#93a1a1 -sb \\#073642 -sf \\#93a1a1"
+dmenu' = "dmenu_run -fn Consolas-7:bold -nb \\#002b36 -nf \\#93a1a1 -sb \\#073642 -sf \\#93a1a1"
 
 config' = withUrgencyHook NoUrgencyHook defaultConfig
           { focusFollowsMouse = False

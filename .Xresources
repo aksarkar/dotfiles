@@ -1,9 +1,8 @@
 #define SOLARIZED_LIGHT
-#define FONT Consolas-10.5
+#define FONT Consolas-8.5
 
 ! Emacs
 Emacs.font: FONT
-Emacs.geometry: 80x43
 Emacs.pane.menubar.font: FONT
 
 ! Xcursor
@@ -93,7 +92,7 @@ URxvt.letterSpace: -1
 *color15: S_base3
 
 ! Xft
-Xft.dpi: 96
+Xft.dpi: 120
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintslight
