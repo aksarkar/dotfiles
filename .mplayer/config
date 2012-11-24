@@ -1,7 +1,9 @@
 ao=alsa
-vo=xv
-cache=8192
 cache-min=10
-prefer-ipv4=true
-nolirc=true
+cache=8192
+dvd-device=/dev/sr0
 font="Segoe UI"
+nolirc=true
+prefer-ipv4=true
+really-quiet=true
+vo=xv
