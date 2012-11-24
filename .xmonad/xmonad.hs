@@ -16,8 +16,6 @@ import XMonad.Layout.NoBorders
 import qualified XMonad.StackSet as W
 
 import XMonad.Util.EZConfig
-import XMonad.Util.Loggers
-import XMonad.Util.Run (spawnPipe)
 
 -- Helper functions to fullscreen the window
 fullFloat :: Window -> X ()
