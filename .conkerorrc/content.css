@@ -71,7 +71,7 @@ font {
     }
 }
 
-@-moz-document domain(google.com) {
+@-moz-document domain(google.com), domain(facebook.com) {
     body {max-width: none !important}
 }
 
