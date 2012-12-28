@@ -1,0 +1,32 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Remove extra padding from the Navigation Bar */
+.toolbarbutton-1, .toolbarbutton-menubutton-button {padding: 2px 3px !important}
+.toolbarbutton-1[checked="true"],
+.toolbarbutton-1[open="true"],
+.toolbarbutton-menubutton-button[checked="true"],
+.toolbarbutton-menubutton-button[open="true"] {padding: 4px 1px 1px 4px !important}
+
+/* remove favicons from tabs */
+tab .tab-icon {display:none !important}
+
+/* remove tab bar dropdown */
+.tabs-alltabs-box,
+.tabs-alltabs-box-animate,
+.tabs-alltabs-button {display:none !important}
+
+/* remove feed icon from location bar */
+#feed-button {display:none !important}
+
+/* remove go button from searchbar */
+.search-go-button {display:none !important}
+
+/* remove close button from focused tab (and all tabs) */
+.tabbrowser-tab .tab-close-button {display:none !important}
+
+.tabbrowser-tab {padding-bottom:2px !important}
+
+#urlbar-icons {display:none !important}
+
+/* remove new tab button */
+.tabs-newtab-button {display: none;}
