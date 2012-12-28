@@ -66,6 +66,9 @@ font {
     button, input, textarea {
         font: inherit !important;
     }
+    #watch7-sidebar, #watch7-discussion, #watch7-playlist-container {
+        display: none !important;
+    }
 }
 
 @-moz-document domain(google.com) {
