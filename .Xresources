@@ -15,7 +15,7 @@ URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,selection,matcher
 URxvt.scrollBar: false
 URxvt.urgentOnBell: true
-URxvt.urlLauncher: conkeror
+URxvt.url-launcher: conkeror
 URxvt.letterSpace: -1
 
 ! Solarized colors
