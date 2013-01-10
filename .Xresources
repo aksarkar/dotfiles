@@ -92,8 +92,10 @@ URxvt.letterSpace: -1
 *color15: S_base3
 
 ! Xft
-Xft.dpi: 120
 Xft.antialias: true
+Xft.autohint: false
+Xft.dpi: 120
 Xft.hinting: true
 Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
