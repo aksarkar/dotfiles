@@ -12,8 +12,9 @@ alias ml='make -f /usr/local/include/makefiles/Makefile.LATEX '
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
+export BROWSER='conkeror'
 export EDITOR='emacsclient -c'
 export INFOPATH=/usr/local/info:/usr/share/info
 export MAILDIR=$HOME/mail
 export TERM='xterm-256color'
-export VISUAL='emacsclient -c'
+export VISUAL=$EDITOR
