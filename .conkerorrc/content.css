@@ -77,7 +77,10 @@ font {
 
 @-moz-document domain(nytimes.com) {
     #TP_container, #TP_container_shadow {display: none !important}
-    body {padding-top: 0 !important}
+    body {
+        padding-top: 0 !important;
+        font-family: serif !important
+    }
 }
 
 @-moz-document domain(github.com) {
