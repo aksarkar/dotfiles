@@ -30,3 +30,8 @@ tab .tab-icon {display:none !important}
 
 /* remove new tab button */
 .tabs-newtab-button {display: none;}
+
+/* Make placeholders transparent on focus */
+.textbox-input:-moz-placeholder:focus, .textbox-textarea:-moz-placeholder:focus { 
+    color: transparent !important; 
+}

@@ -107,3 +107,9 @@ span.__conkeror_hint {
     padding: 0 2px !important;
     text-transform: uppercase !important;
 }
+
+/* Make placeholders disappear on focus */
+input:-moz-placeholder:focus, textarea:-moz-placeholder:focus { 
+    color:
+    transparent !important; 
+}
