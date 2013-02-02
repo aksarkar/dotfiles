@@ -1,0 +1,9 @@
+terminal=urxvtc
+interm=mplayer
+'\b(www\.|(https?|ftp)://)':$BROWSER
+.pdf:mupdf
+.ogg:mplayer  # still gets mapped to application/ogg
+image:feh
+video:mplayer
+audio:mplayer
+default:$EDITOR
