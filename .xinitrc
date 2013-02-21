@@ -12,12 +12,6 @@ fi
 # Local resources
 xrdb -merge .Xresources
 
-# Emacs daemon
-emacs --daemon
-
-# URxvt daemon
-urxvtd &
-
 # Ultranav configuration
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
@@ -40,13 +34,11 @@ xsetroot -cursor_name left_ptr
 # Restore background
 eval `cat $HOME/.fehbg` &
 
-# Screen locker
-xautolock -locker "i3lock -c 000000 -u" &
-
-# Unclutter
+# Daemons
+emacs --daemon
+redshift &
 unclutter &
-
-# Thinkpad T410 ICC profile
-xcalib -d :0 $HOME/.dotfiles/t410s.icc
+urxvtd &
+xautolock -locker "i3lock -c 000000 -u" &
 
 xmonad
