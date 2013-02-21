@@ -27,4 +27,4 @@ export VISUAL=$EDITOR
 
 reuse -q GCC-4.4  # need to reset LD_LIBRARY_PATH
 use -q LSF
-use -q R-2.12
+use -q R-2.15
