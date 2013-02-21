@@ -22,7 +22,7 @@ export LSB_DEFAULTPROJECT='compbiofolk'
 export MANPATH=$MANPATH:$HOME/.local/share/man
 export PATH=$HOME/.local/bin:$PATH
 export PYTHONPATH=$HOME/.local/lib/python
-export TERM='xterm-256color'
+export TERM='xterm-16color'
 export VISUAL=$EDITOR
 
 reuse -q GCC-4.4  # need to reset LD_LIBRARY_PATH
