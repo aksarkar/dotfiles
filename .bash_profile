@@ -1,2 +1,2 @@
 eval `$HOME/.local/bin/keychain -q --nocolor --eval $HOME/.ssh/id_rsa`
-screen -D -RR
+[[ $(hostname) = "nickel.broadinstitute.org" ]] && screen -D -RR
