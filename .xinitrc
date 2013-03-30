@@ -20,13 +20,8 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # Keyboard configuration
 kb1=$(xinput list | grep "AT" | sed -re "s/.*id=([0-9]+).*/\1/")
-kb2=$(xinput list | grep "Topre" | sed -re "s/.*id=([0-9]+).*/\1/")
 setxkbmap -device $kb1 -option ctrl:swapcaps
 setxkbmap -device $kb1 -option compose:ralt
-if [[ ! -z $kb2 ]]
-then
-    setxkbmap -device $kb2 -option compose:ralt
-fi
 
 # Set the cursor
 xsetroot -cursor_name left_ptr
