@@ -113,3 +113,7 @@ input:-moz-placeholder:focus, textarea:-moz-placeholder:focus {
     color:
     transparent !important; 
 }
+
+#missingPluginPlaceholder {
+    display: none !important;
+}
