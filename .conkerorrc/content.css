@@ -66,7 +66,7 @@ font {
     button, input, textarea {
         font: inherit !important;
     }
-    #watch7-sidebar, #watch7-discussion, #watch7-playlist-container {
+    #watch7-sidebar, #watch-discussion, #watch7-playlist-container {
         display: none !important;
     }
 }
