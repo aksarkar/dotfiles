@@ -19,8 +19,7 @@ define_webjump("github", "https://github.com");
 // School stuff
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 define_webjump("encodewiki", "http://wiki.encodedcc.org/");
-define_webjump("6.438", "https://stellar.mit.edu/S/course/6/fa12/6.438/");
-define_webjump("21M.480", "https://stellar.mit.edu/S/course/21M/fa12/21M.480/");
+define_webjump("7.33", "https://stellar.mit.edu/S/course/7/sp13/7.33/");
 
 // Useful lookups
 define_webjump("archwiki", 
