@@ -30,6 +30,3 @@ require("noscript");
 
 // Page modes
 require("page-modes/gmail.js");
-
-// MIME handlers
-external_content_handlers.set("application/pdf", "mupdf");
