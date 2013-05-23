@@ -27,12 +27,12 @@ function setbg {
 
 function dock {
     xrandr --output LVDS1 --off
-    xrandr --output DP3 --auto --primary --output HDMI2 --auto --right-of DP3
+    xrandr --output HDMI3 --auto --primary --output HDMI2 --auto --right-of HDMI3
     setbg
 }
 
 function undock {
-    xrandr --output DP3 --off --output HDMI2 --off
+    xrandr --output HDMI3 --off --output HDMI2 --off
     xrandr --output LVDS1 --auto
     setbg
 }
