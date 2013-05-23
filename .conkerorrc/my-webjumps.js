@@ -4,7 +4,7 @@ define_webjump("image", "http://images.google.com/images?q=%s");
 define_webjump("mail", "https://mail.google.com");
 define_webjump("maps", "http://maps.google.com/?q=%s");
 define_webjump("youtube", "http://www.youtube.com/results?search_query=%s",
-               $alternative = "http://www.youtube.com");
+               $alternative="http://www.youtube.com");
 define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 
 // Frequently read
@@ -20,13 +20,16 @@ define_webjump("github", "https://github.com");
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 define_webjump("encodewiki", "http://wiki.encodedcc.org/");
 define_webjump("7.33", "https://stellar.mit.edu/S/course/7/sp13/7.33/");
+define_webjump("mta-calendar", "https://web.mit.edu/smuto/mta/mta-calendar.html")
 
 // Useful lookups
 define_webjump("archwiki", 
                "https://wiki.archlinux.org/index.php/Special:Search?search=%s", 
-               $alternative = "https://wiki.archlinux.org/");
+               $alternative="https://wiki.archlinux.org/");
 define_webjump("aur", "https://aur.archlinux.org/packages.php?K=%s",
-               $alternative = "https://aur.archlinux.org");
+               $alternative="https://aur.archlinux.org");
+define_webjump("dota2wiki", "http://www.dota2wiki.com/wiki/Special:Search?search=%s",
+               $alternative="http://www.dota2wiki.com/wiki/Dota_2_Wiki")
 define_webjump("emacswiki",
                "http://www.google.com/cse?cx=004774160799092323420%3A6-ff2s0o6yi" +
                "&q=%s&sa=Search&siteurl=emacswiki.org%2F",
