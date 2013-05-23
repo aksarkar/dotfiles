@@ -78,4 +78,7 @@ case $1 in
             fi
         fi
         ;;
+    dock)
+        dock
+        ;;
 esac
