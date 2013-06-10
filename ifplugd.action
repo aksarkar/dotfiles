@@ -1,0 +1,10 @@
+#!/bin/bash
+case $2 in
+    up)
+        dhcpcd $1
+        ;;
+    down)
+        dhcpcd -k $1
+        ;;
+esac
+
