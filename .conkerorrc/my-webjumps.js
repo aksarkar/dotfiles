@@ -16,11 +16,15 @@ define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge?sp=KMACAM
 // Social networks
 define_webjump("github", "https://github.com");
 
-// School stuff
+// Research
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 define_webjump("encodewiki", "http://wiki.encodedcc.org/");
-define_webjump("7.33", "https://stellar.mit.edu/S/course/7/sp13/7.33/");
-define_webjump("mta-calendar", "https://web.mit.edu/smuto/mta/mta-calendar.html")
+define_webjump("impute2", "http://mathgen.stats.ox.ac.uk/impute/impute_v2.html");
+define_webjump("shapeit2", "http://shapeit.fr");
+define_webjump("ng", "http://www.nature.com/ng/");
+define_webjump("nbt", "http://www.nature.com/nbt/");
+define_webjump("nature", "http://www.nature.com/nature/");
+define_webjump("science", "http://sciencemag.org");
 
 // Useful lookups
 define_webjump("archwiki", 
