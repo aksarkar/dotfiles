@@ -117,3 +117,7 @@ input:-moz-placeholder:focus, textarea:-moz-placeholder:focus {
 #missingPluginPlaceholder {
     display: none !important;
 }
+
+@-moz-document url-prefix(http://mathgen.stats.ox.ac.uk/impute/) {
+    #content {position: relative; left: 200px}
+}
