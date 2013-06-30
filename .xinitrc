@@ -30,6 +30,7 @@ xsetroot -cursor_name left_ptr
 eval `cat $HOME/.fehbg` &
 
 # Daemons
+dropboxd &
 emacs --daemon
 redshift &
 unclutter &
