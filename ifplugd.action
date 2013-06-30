@@ -5,6 +5,7 @@ case $2 in
         ;;
     down)
         dhcpcd -k $1
+        ip -6 addr flush dev $1
         ;;
 esac
 
