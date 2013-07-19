@@ -32,8 +32,6 @@ define_webjump("archwiki",
                $alternative="https://wiki.archlinux.org/");
 define_webjump("aur", "https://aur.archlinux.org/packages.php?K=%s",
                $alternative="https://aur.archlinux.org");
-define_webjump("dota2wiki", "http://www.dota2wiki.com/wiki/Special:Search?search=%s",
-               $alternative="http://www.dota2wiki.com/wiki/Dota_2_Wiki")
 define_webjump("emacswiki",
                "http://www.google.com/cse?cx=004774160799092323420%3A6-ff2s0o6yi" +
                "&q=%s&sa=Search&siteurl=emacswiki.org%2F",
