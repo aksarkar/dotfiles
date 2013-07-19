@@ -110,8 +110,7 @@ span.__conkeror_hint {
 
 /* Make placeholders disappear on focus */
 input:-moz-placeholder:focus, textarea:-moz-placeholder:focus { 
-    color:
-    transparent !important; 
+    color: transparent !important; 
 }
 
 #missingPluginPlaceholder {
