@@ -31,3 +31,16 @@ require("noscript");
 // Page modes
 require("gmail.js");
 require("google-voice.js");
+
+// Proxy settings
+interactive("proxy-activate",
+            "Activate SOCKS proxy on localhost:8080",
+            function (I) {
+                session_pref('network.proxy.type', 1);
+            });
+
+interactive("proxy-deactivate",
+            "Deactivate SOCKS proxy",
+            function(I) {
+                session_pref('network.proxy.type', 0);
+            });
