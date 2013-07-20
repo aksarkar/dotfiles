@@ -29,4 +29,5 @@ view_source_use_external_editor = true;
 require("noscript");
 
 // Page modes
-require("page-modes/gmail.js");
+require("gmail.js");
+require("google-voice.js");
