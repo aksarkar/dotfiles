@@ -36,6 +36,8 @@ require("google-voice.js");
 interactive("proxy-activate",
             "Activate SOCKS proxy on localhost:8080",
             function (I) {
+                session_pref('network.proxy.socks', 'localhost');
+                session_pref('network.proxy.socks_port', 8080);
                 session_pref('network.proxy.type', 1);
             });
 
