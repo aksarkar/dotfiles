@@ -27,7 +27,7 @@ setxkbmap -device $kb1 -option compose:ralt
 xsetroot -cursor_name left_ptr
 
 # Restore background
-eval `cat $HOME/.fehbg` &
+eval $(<$HOME/.fehbg)&
 
 # Daemons
 dropboxd &
