@@ -19,7 +19,7 @@ hint_background_color = "#ececec";
 active_hint_background_color = "#e0e0ff";
 image_hint_background_color = "#ececec";
 active_image_hint_background_color = "#d0d0ff";
-hints_display_url_panel = true;
+hints_minibuffer_annotation_mode(true);
 
 // External editor
 editor_shell_command = "emacsclient -c";
