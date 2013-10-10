@@ -1,5 +1,5 @@
 ao=alsa
-cache-min=10
+cache-min=20
 cache=8192
 dvd-device=/dev/sr0
 font="Segoe UI"
