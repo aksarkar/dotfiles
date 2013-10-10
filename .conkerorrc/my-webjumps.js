@@ -9,7 +9,7 @@ define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 
 // Frequently read
 define_webjump("economist", "http://www.economist.com/");
-define_webjump("guardian", "http://m.guardiannews.com");
+define_webjump("guardian", "http://www.theguardian.com/us?view=mobile");
 define_webjump("nytimes", "http://mobile.nytimes.com");
 define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge?sp=KMACAMBR9");
 
