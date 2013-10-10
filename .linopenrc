@@ -1,8 +1,9 @@
 terminal=urxvtc
 interm=mplayer
-?'\b(www\.|(https?|ftp)://)':$BROWSER
+?'\\(www.\\|\\(https\\?\\|ftp\\)://\\)':conkeror
 .pdf:mupdf
-.ogg:mplayer  # still gets mapped to application/ogg
+# still gets mapped to application/ogg
+.ogg:mplayer
 image:feh
 video:mplayer
 audio:mplayer
