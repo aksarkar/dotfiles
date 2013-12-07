@@ -25,12 +25,9 @@ hints_minibuffer_annotation_mode(true);
 editor_shell_command = "emacsclient -c";
 view_source_use_external_editor = true;
 
-// Noscript convenience functions
-require("noscript");
-
 // Page modes
-require("gmail.js");
-require("google-voice.js");
+require("gmail");
+require("google-voice");
 
 // Proxy settings
 interactive("proxy-activate",
