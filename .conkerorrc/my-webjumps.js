@@ -11,20 +11,25 @@ define_webjump("scholar", "http://scholar.google.com/scholar?q=%s");
 define_webjump("economist", "http://www.economist.com/");
 define_webjump("guardian", "http://www.theguardian.com/us?view=mobile");
 define_webjump("nytimes", "http://mobile.nytimes.com");
+define_webjump("jacobin", "http://jacobinmag.com");
 define_webjump("weather", "http://www.wunderground.com/us/ma/cambridge?sp=KMACAMBR9");
+define_webjump("mta-reservation", 
+               "https://docs.google.com/spreadsheet/embeddedform?formkey=dExKOWpRWmxsR1ZIMVhRNlVZQ2ZxVmc6MQ");
 
 // Social networks
 define_webjump("github", "https://github.com");
+define_webjump("bitbucket", "https://bitbucket.org");
 
 // Research
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
 define_webjump("encodewiki", "http://wiki.encodedcc.org/");
+define_webjump("gr", "http://genome.cshlp.org/");
 define_webjump("impute2", "http://mathgen.stats.ox.ac.uk/impute/impute_v2.html");
-define_webjump("shapeit2", "http://shapeit.fr");
-define_webjump("ng", "http://www.nature.com/ng/");
-define_webjump("nbt", "http://www.nature.com/nbt/");
 define_webjump("nature", "http://www.nature.com/nature/");
+define_webjump("nbt", "http://www.nature.com/nbt/");
+define_webjump("ng", "http://www.nature.com/ng/");
 define_webjump("science", "http://sciencemag.org");
+define_webjump("shapeit2", "http://shapeit.fr");
 
 // Useful lookups
 define_webjump("archwiki", 
