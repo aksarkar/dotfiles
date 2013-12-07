@@ -7,4 +7,4 @@ xs=("http://m.xkcd.com"
     "http://satwcomic.com"
     "http://zenpencils.com"
    )
-parallel -X conkeror ::: ${xs[*]}
+parallel -j1 -X conkeror ::: ${xs[*]}
