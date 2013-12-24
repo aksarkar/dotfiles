@@ -1,0 +1,9 @@
+ao=alsa
+autofit-larger=99%
+cache-min=20
+cache=8192
+dvd-device=/dev/sr0
+osd-font="Segoe UI"
+really-quiet
+softvol=no
+vo=opengl-old

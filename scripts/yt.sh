@@ -7,4 +7,4 @@
 #
 
 COOKIE_FILE=/tmp/yt-cookies.txt
-mplayer -cookies -cookies-file ${COOKIE_FILE} $(youtube-dl -g --cookies ${COOKIE_FILE} $*)
+mpv --cookies --cookies-file ${COOKIE_FILE} $(youtube-dl -g --cookies ${COOKIE_FILE} $*)
