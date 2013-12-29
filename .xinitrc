@@ -20,9 +20,9 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # Keyboard configuration
+xmodmap .Xmodmap
 kb1=$(xinput list | grep "AT" | sed -re "s/.*id=([0-9]+).*/\1/")
 setxkbmap -device $kb1 -option ctrl:swapcaps
-setxkbmap -device $kb1 -option compose:ralt
 
 # Set the cursor
 xsetroot -cursor_name left_ptr
@@ -32,10 +32,14 @@ eval $(<$HOME/.fehbg)&
 
 # Daemons
 dropboxd &
-emacs --daemon
 redshift &
 unclutter &
 urxvtd &
 xautolock -locker "i3lock -c 000000 -u" &
+
+# Applications
+conkeror &
+emacsclient -nc &
+quodlibet &
 
 xmonad
