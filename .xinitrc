@@ -32,6 +32,7 @@ eval $(<$HOME/.fehbg)&
 
 # Daemons
 dropboxd &
+emacs --daemon &
 redshift &
 unclutter &
 urxvtd &
@@ -39,7 +40,6 @@ xautolock -locker "i3lock -c 000000 -u" &
 
 # Applications
 conkeror &
-emacsclient -nc &
 quodlibet &
 
 xmonad
