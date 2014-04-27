@@ -127,3 +127,13 @@ input:-moz-placeholder:focus, textarea:-moz-placeholder:focus {
         overflow: visible !important;
     }
 }
+
+@-moz-document domain(what-if.xkcd.com) {
+    .refnum {
+        display: none !important;
+    }
+    .refbody {
+        position: static !important;
+        display: inline !important;
+    }
+}
