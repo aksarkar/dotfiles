@@ -1,5 +1,6 @@
 // Frequently used Google apps
 define_webjump("calendar", "https://www.google.com/calendar");
+define_webjump("drive", "https://drive.google.com");
 define_webjump("image", "https://images.google.com/images?q=%s");
 define_webjump("mail", "https://mail.google.com");
 define_webjump("maps", "https://maps.google.com/?q=%s");
@@ -11,6 +12,7 @@ define_webjump("scholar", "https://scholar.google.com/scholar?q=%s");
 define_webjump("economist", "http://www.economist.com/");
 define_webjump("guardian", "http://www.theguardian.com/us?view=mobile");
 define_webjump("jacobin", "http://jacobinmag.com");
+define_webjump("nlr", "https://newleftreview.org/");
 define_webjump("nytimes", "http://mobile.nytimes.com");
 define_webjump("spiegel", "https://www.spiegel.de/international/")
 define_webjump("weather", "https://www.wunderground.com/us/ma/cambridge?sp=KMACAMBR9");
@@ -36,4 +38,4 @@ define_webjump("archwiki",
                $alternative="https://wiki.archlinux.org/");
 define_webjump("aur", "https://aur.archlinux.org/packages.php?K=%s",
                $alternative="https://aur.archlinux.org");
-define_webjump("oed", "https://oed.com/search?searchType=dictionary&q=%s");
+define_webjump("oed", "http://oed.com/search?searchType=dictionary&q=%s");
