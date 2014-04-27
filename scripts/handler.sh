@@ -18,6 +18,7 @@ export XAUTHORITY=$XAUTH
 dockusb=/sys/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.5
 
 function lock {
+    xautolock -enable
     xautolock -locknow
 }
 
