@@ -93,11 +93,11 @@ font {
 }
 
 /* change max-width of wiki pages */
-body.mediawiki {max-width: 100% !important}
+body.mediawiki {font-family: sans-serif !important; max-width: 100% !important}
 body.mediawiki #panel {font-size: 1em !important}
 body.mediawiki #bodyContent {max-width: 40em !important;}
 body.mediawiki #bodyContent {font-size: 12pt !important}
-body.mediawiki h1, body.mediawiki h2, body.mediawiki h3 {font-weight: 500 !important}
+body.mediawiki h1, body.mediawiki h2, body.mediawiki h3 {font-family: sans-serif !important; font-weight: 500 !important}
 body.mediawiki p {margin: 0 0 1.5em 0 !important}
 
 span.__conkeror_hint {
