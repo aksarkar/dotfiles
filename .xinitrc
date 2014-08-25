@@ -34,7 +34,7 @@ eval $(<$HOME/.fehbg)&
 dropboxd &
 emacs --daemon &
 redshift &
-unclutter &
+unclutter -not QEMU &
 urxvtd &
 xautolock -locker "i3lock -c 000000 -u" &
 
