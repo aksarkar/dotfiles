@@ -1,17 +1,11 @@
 #!/bin/bash
-
 set -e
+set -u
 set $*
 
-XAUTH="$(ps -C X f | sed -n 's/.*-auth \([a-zA-Z0-9./]*\).*/\1/p')"
-if [[ -z $XAUTH ]]
-then
-    # if XAUTH is blank try another way to get it 
-    XAUTH="$(ps -C xinit f | sed -n 's/.*-auth \(.*\)serverauth.*/\1Xauthority/p')"
-fi
-
+auth=$(pgrep -a X | awk '{sub(/.*-auth/, "", $0); print $1}')
+export XAUTHORITY=${auth?"failed to get XAuthority"}
 export DISPLAY=:0
-export XAUTHORITY=$XAUTH
 
 # Hack to detect whether or not we're docked. Thinkpad Mini Dock Plus Series 3
 # doesn't show up in sysfs as a dock, so test for the extra USB ports instead
