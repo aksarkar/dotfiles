@@ -51,9 +51,9 @@ handleEventHook' = fullScreenEventHook
 
 modMask' = mod4Mask
 
-manageHook' = composeAll
-              [ isFullscreen --> doFullFloat
-              , className =? "mpv" --> doFloat
+manageHook' = composeAll . concat $
+              [ [ isFullscreen --> doFullFloat ]
+              , [ className =? c --> doFloat | c <- ["mpv", "vbam", "Pinentry"] ]
               ]
 
 dmenu' = "dmenu_run -fn Consolas:bold:pixelsize=12 -nb \\#002b36 -nf \\#93a1a1 -sb \\#073642 -sf \\#93a1a1"
