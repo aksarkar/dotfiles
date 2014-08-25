@@ -24,8 +24,9 @@ define_webjump("github", "https://github.com");
 define_webjump("bitbucket", "https://bitbucket.org");
 
 // Research
+define_webjump("bioinformatics", "http://bioinformatics.oxfordjournals.org/");
 define_webjump("compbiowiki", "https://groups.csail.mit.edu/compbio/wiki/");
-define_webjump("encodewiki", "https://wiki.encodedcc.org/");
+define_webjump("encodewiki", "http://wiki.encodedcc.org/");
 define_webjump("gr", "http://genome.cshlp.org/");
 define_webjump("nature", "http://www.nature.com/nature/");
 define_webjump("nbt", "http://www.nature.com/nbt/");
