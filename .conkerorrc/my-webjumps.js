@@ -14,8 +14,9 @@ define_webjump("guardian", "http://www.theguardian.com/us?view=mobile");
 define_webjump("jacobin", "http://jacobinmag.com");
 define_webjump("nlr", "https://newleftreview.org/");
 define_webjump("nytimes", "http://mobile.nytimes.com");
-define_webjump("spiegel", "https://www.spiegel.de/international/")
-define_webjump("weather", "https://www.wunderground.com/us/ma/cambridge?sp=KMACAMBR9");
+define_webjump("spiegel", "https://www.spiegel.de/international/");
+define_webjump("tor", "http://www.tor.com/");
+define_webjump("weather", "http://openweathermap.org/city/4930956");
 define_webjump("mta-reservation", 
                "https://docs.google.com/spreadsheet/embeddedform?formkey=dExKOWpRWmxsR1ZIMVhRNlVZQ2ZxVmc6MQ");
 
