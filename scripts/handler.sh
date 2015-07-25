@@ -3,7 +3,7 @@ set -e
 set -u
 set $*
 
-auth=$(pgrep -a X | awk '{sub(/.*-auth/, "", $0); print $1}')
+auth=$(pgrep -a Xorg | awk '{sub(/.*-auth/, "", $0); print $1}')
 export XAUTHORITY=${auth?"failed to get XAuthority"}
 export DISPLAY=:0
 
@@ -17,18 +17,18 @@ function lock {
 }
 
 function setbg {
-    sudo -u asarkar bash -c 'eval $(<$HOME/.fehbg)'
+    sh /home/asarkar/.fehbg
 }
 
 function dock {
-    xrandr --output LVDS1 --off
-    xrandr --output HDMI3 --auto --primary --output HDMI2 --auto --right-of HDMI3
+    xrandr --output HDMI2 --auto --output LVDS1 --off
+    xrandr --output HDMI3 --auto --primary --left-of HDMI2
     setbg
 }
 
 function undock {
-    xrandr --output HDMI3 --off --output HDMI2 --off
-    xrandr --output LVDS1 --auto
+    xrandr --output HDMI2 --off
+    xrandr --output LVDS1 --auto --primary --output HDMI3 --off
     setbg
 }
 
@@ -62,18 +62,16 @@ case $1 in
         xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
         ;;
     ibm/hotkey)
-        if [[ $2 == IBM0068:00 ]]
+        if [[ $2 == IBM0068:00 && $4 == 00004010 ]]
         then
-            if [[ $4 == 00004010 ]]
-            then
-                dock
-            elif [[ $4 == 00004011 ]]
-            then
-                standby
-            fi
+            dock
         fi
         ;;
     dock)
         dock
+        ;;
+    undock)
+        undock
+        standby
         ;;
 esac
