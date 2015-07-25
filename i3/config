@@ -66,18 +66,3 @@ exec --no-startup-id "xsetroot -cursor_name left_ptr"
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
 exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc"
 exec --no-startup-id i3-msg "workspace 1; exec conkeror"
-
-bar {
-    position top
-    tray_output none
-    status_command i3status
-    colors {
-           background #002b36
-           statusline #839496
-           separator #839496
-           focused_workspace #839496 #839496 #002b36
-           active_workspace #002b36 #002b36 #839496
-           inactive_workspace #002b36 #002b36 #93a1a1
-           urgent_workspace #dc322f #dc322f #fdf6e3
-    }
-}
