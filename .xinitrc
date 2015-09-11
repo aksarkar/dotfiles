@@ -19,18 +19,9 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
-# Keyboard configuration
-keyboard.sh
-
-# Set the cursor
-xsetroot -cursor_name left_ptr
-
-# Restore background
-sh $HOME/.fehbg
-
 # Daemons
 dropbox start &
-emacs --daemon -l $HOME/.emacs.d/init.el &
+emacs --daemon &
 redshift &
 unclutter -not QEMU &
 urxvtd &
