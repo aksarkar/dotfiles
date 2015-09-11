@@ -11,6 +11,7 @@ define_webjump("scholar", "https://scholar.google.com/scholar?q=%s");
 // Frequently read
 define_webjump("economist", "http://www.economist.com/");
 define_webjump("guardian", "http://www.theguardian.com/us?view=mobile");
+define_webjump("guernica", "https://www.guernicamag.com/");
 define_webjump("jacobin", "http://jacobinmag.com");
 define_webjump("nlr", "https://newleftreview.org/");
 define_webjump("nytimes", "http://mobile.nytimes.com");
