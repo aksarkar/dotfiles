@@ -62,7 +62,6 @@ bindsym XF86AudioStop exec "quodlibet --pause"
 for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
 
-exec --no-startup-id "xsetroot -cursor_name left_ptr"
-exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc"
 exec --no-startup-id i3-msg "workspace 1; exec conkeror"
+exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
+exec --no-startup-id i3-msg "workspace 2; exec emacsclient -c"
