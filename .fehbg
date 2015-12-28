@@ -1,1 +1,2 @@
-feh  --bg-fill '/usr/local/share/backgrounds/m42_vargas_1826.jpg' 
+#!/bin/sh
+feh  --image-bg black --bg-max '/usr/local/share/backgrounds/Pluto-Wide-FINAL-9-17-15.jpg'
