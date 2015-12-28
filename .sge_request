@@ -1,0 +1,8 @@
+-S /bin/bash
+-V
+-cwd
+-j y
+-l arch=lx-amd64
+-r y
+-sync y
+-terse
