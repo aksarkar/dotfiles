@@ -1,30 +1,37 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
+# dotkits
+use -q taciturn
+use .bedtools-2.24.0
+use .emacs-24.5
+use .git-2.0.5
+use .gtool-0.7.5
+use .impute2-2.3.2
+use .snptest-2.5.1
+use Java-1.7
+use Anaconda3
+use GCC-4.9
+use UGER
+
 # Don't echo ^C
 stty -ctlecho
 
-# git completion
-. $HOME/.local/src/git/contrib/completion/git-completion.bash
-
-alias ish='bsub -q interactive -Is bash'
 alias ls='ls -F --color=always'
-alias la='ls -a'
 alias grep='grep --color=auto'
+alias q='qsub -cwd -V -terse -j y -sync y -S /bin/bash'
+alias r='qrsh -q interactive -cwd -V R --vanilla --quiet'
+alias m='qmake -cwd -V -now n'
+alias i='qrsh -q interactive'
 
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
-export BROWSER='conkeror'
+export CDPATH=.:/broad/compbio/aksarkar/projects/gwas/wtccc1/EC21/results:/broad/compbio/aksarkar/projects:/broad/compbio/aksarkar:/broad/hptmp/aksarkar:$HOME/code
 export EDITOR='emacsclient -c'
-export LANG='en_US.utf8'
-export LSB_DEFAULTPROJECT='compbiofolk'
-export MANPATH=$MANPATH:$HOME/.local/share/man
-export PATH=$HOME/.local/bin:$PATH
-export PYTHONPATH=$HOME/.local/lib/python
+export LANG='en_US.UTF-8'
+export PATH=$PATH:$HOME/.local/bin
+export SGE_ARCH=lx-amd64
 export TERM='xterm-16color'
 export VISUAL=$EDITOR
 
-reuse -q GCC-4.4  # need to reset LD_LIBRARY_PATH
-use -q LSF
-use -q R-2.15
