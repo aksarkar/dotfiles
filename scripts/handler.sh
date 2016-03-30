@@ -43,6 +43,8 @@ function standby {
     else
         undock
     fi
+    keyboard.sh
+    udevadm trigger /sys/devices/platform/i8042/serio1/serio2
 }
 
 case $1 in
