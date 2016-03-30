@@ -64,4 +64,4 @@ for_window [class="pinentry"] floating enable
 
 exec --no-startup-id i3-msg "workspace 1; exec conkeror"
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 2; exec emacsclient -c"
+exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc -a ''"

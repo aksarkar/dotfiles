@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --image-bg black --bg-max '/usr/local/share/backgrounds/Pluto-Wide-FINAL-9-17-15.jpg'
+feh  --image-bg black --bg-max '/usr/local/share/backgrounds/Pluto-Wide-FINAL-9-17-15.jpg' 
