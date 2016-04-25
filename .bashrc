@@ -31,10 +31,10 @@ alias i='qrsh -q interactive'
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
-export CDPATH=.:/broad/compbio/aksarkar/projects/gwas/wtccc1/EC21/results:/broad/compbio/aksarkar/projects:/broad/compbio/aksarkar:/broad/hptmp/aksarkar:$HOME/code
+export CDPATH=.:/broad/compbio/aksarkar/projects/roadmap:/broad/compbio/aksarkar/projects:/broad/compbio/aksarkar:/broad/hptmp/aksarkar:$HOME/code
 export EDITOR='emacsclient -c'
 export LANG='en_US.UTF-8'
-export PATH=$PATH:$HOME/.local/bin
+export PATH=/broad/compbio/aksarkar/.local/bin:$PATH
 export SGE_ARCH=lx-amd64
 export TERM='xterm-16color'
 export VISUAL=$EDITOR
