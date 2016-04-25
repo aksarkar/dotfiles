@@ -3,8 +3,12 @@
 
 # dotkits
 use -q taciturn
+use .autoconf-2.69
 use .bedtools-2.24.0
+use .cmake-3.3.1
+use .curl-7.23.0
 use .emacs-24.5
+use .icc-2015
 use .git-2.0.5
 use .gtool-0.7.5
 use .impute2-2.3.2
