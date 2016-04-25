@@ -24,8 +24,8 @@ stty -ctlecho
 alias ls='ls -F --color=always'
 alias grep='grep --color=auto'
 alias q='qsub -cwd -V -terse -j y -sync y -S /bin/bash'
-alias r='qrsh -q interactive -cwd -V R --vanilla --quiet'
-alias m='qmake -cwd -V -now n'
+alias r='qrsh -q interactive -cwd -V R --vanilla --quiet --interactive'
+alias m='qmake -V -now n'
 alias i='qrsh -q interactive'
 
 PS1='\u@\h:\w\$ '
