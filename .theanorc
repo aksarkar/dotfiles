@@ -1,0 +1,7 @@
+[global]
+device=cpu
+exception_verbosity=high
+floatX=float32
+force_device=False
+mode=FAST_RUN
+profile=True
