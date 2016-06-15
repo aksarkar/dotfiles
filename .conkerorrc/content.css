@@ -137,3 +137,9 @@ input:-moz-placeholder:focus, textarea:-moz-placeholder:focus {
         display: inline !important;
     }
 }
+
+@-moz-document domain(guernica.com) {
+    blockquote {
+        display: none !important;
+    }
+}
