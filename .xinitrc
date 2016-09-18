@@ -22,7 +22,7 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # Daemons
-dropbox start &
+ionice -c 3 dropbox start -i &
 redshift &
 unclutter -not QEMU &
 urxvtd &
