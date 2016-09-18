@@ -6,6 +6,7 @@ body {
     max-width: 80em !important; 
     line-height: 1.5 !important;
     margin: auto;
+    opacity: 100 !important;
 }
 
 /* kill <marquee> */
