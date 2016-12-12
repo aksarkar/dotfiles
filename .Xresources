@@ -94,6 +94,7 @@ Xft.rgba: rgb
 URxvt*cursorBlink: 0
 URxvt.font: xft:FONT
 URxvt.intensityStyles: false
+URxvt*iso14755: False
 URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,selection,matcher
 URxvt.scrollBar: false
