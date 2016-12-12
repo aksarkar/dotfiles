@@ -2,12 +2,13 @@ all: cdda.flac install clean
 
 install: replaygain
 	rsync -q -f '+ */' -f '+ *.ogg' -f '- *' -au . ~/music/$(notdir $(CURDIR))
+	eject
 
 replaygain: oggenc
 	vorbisgain -q -a *.ogg
 
 oggenc: cdda.toc split
-	awk -f ~/.dotfiles/scripts/toc.awk $< | parallel
+	awk -f ~/.dotfiles/scripts/toc.awk $< | parallel --halt soon,fail=1
 
 split: cdda.cue cdda.wav
 	cuebreakpoints $< | shntool split $(word 2, $^) || ln cdda.wav split-track01.wav

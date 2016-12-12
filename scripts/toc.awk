@@ -56,7 +56,7 @@ $1 == "FILE" {
     printf("oggenc -Q -q6 ")
     for (t in meta) {
         if (meta[t] != "") {
-            printf("-c %s='%s' ", t, meta[t])
+            printf("-c %s=\"%s\" ", t, meta[t])
         }
     }
     printf("-o '%02d. %s.ogg' %s\n", meta["tracknumber"], meta["title"], infile)
