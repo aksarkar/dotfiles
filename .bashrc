@@ -29,7 +29,7 @@ alias i='qrsh -q interactive -cwd -V -pty y'
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
-export CDPATH=.:/broad/compbio/aksarkar/projects/roadmap:/broad/compbio/aksarkar/projects:/broad/compbio/aksarkar:/broad/hptmp/aksarkar:$HOME/code
+export CDPATH=.:/broad/compbio/aksarkar/projects/roadmap:/broad/compbio/aksarkar/projects:/broad/compbio/aksarkar:/broad/compbio/aksarkar/.local/src:/broad/hptmp/aksarkar:$HOME/code
 export EDITOR='emacsclient -c'
 export LANG='en_US.UTF-8'
 export MCRROOT=$(readlink -f $(dirname $(which matlab))/..)
