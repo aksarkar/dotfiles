@@ -22,9 +22,9 @@ stty -ctlecho
 alias ls='ls -F --color=always'
 alias grep='grep --color=auto'
 alias q='qsub -cwd -V -terse -j y -sync y -S /bin/bash'
-alias r='qrsh -q interactive -cwd -V R --vanilla --quiet --interactive'
+alias r='unuse Anaconda3; use R-3.1; qrsh -q interactive -cwd -V -pty y R --no-save --no-restore --quiet --interactive'
 alias m='qmake -V -now n'
-alias i='qrsh -q interactive'
+alias i='qrsh -q interactive -cwd -V -pty y'
 
 PS1='\u@\h:\w\$ '
 
