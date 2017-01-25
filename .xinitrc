@@ -16,9 +16,6 @@ xrdb -merge .Xresources
 sh .fehbg
 
 # Ultranav configuration
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
-xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # Daemons
