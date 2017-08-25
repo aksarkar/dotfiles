@@ -19,10 +19,13 @@ use UGER
 # Don't echo ^C
 stty -ctlecho
 
+function r() {
+    qrsh -q interactive -cwd -V -pty y $* R --no-save --no-restore --quiet --interactive;
+}
+
 alias ls='ls -F --color=always'
 alias grep='grep --color=auto'
 alias q='qsub -cwd -V -terse -j y -sync y -S /bin/bash'
-alias r='unuse Anaconda3; use R-3.1; qrsh -q interactive -cwd -V -pty y R --no-save --no-restore --quiet --interactive'
 alias m='qmake -V -now n'
 alias i='qrsh -q interactive -cwd -V -pty y'
 
@@ -34,6 +37,7 @@ export EDITOR='emacsclient -c'
 export LANG='en_US.UTF-8'
 export MCRROOT=$(readlink -f $(dirname $(which matlab))/..)
 export PATH=/broad/compbio/aksarkar/.local/bin:$PATH
+export R_LIBS_USER=$HOME/R/x86_64-unknown-linux-gnu-library
 export SGE_ARCH=lx-amd64
 export TERM='xterm-16color'
 export VISUAL=$EDITOR
