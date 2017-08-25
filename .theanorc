@@ -7,7 +7,6 @@ force_device=True
 mode=FAST_RUN
 profile=False
 optimizer=fast_run
-optimizer_including=local_ultra_fast_sigmoid
 on_unused_input=ignore
 
 [tensor]
