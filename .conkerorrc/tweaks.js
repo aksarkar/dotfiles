@@ -2,6 +2,8 @@ register_user_stylesheet("file:///home/asarkar/.conkerorrc/content.css");
 
 homepage = "https://mail.google.com";
 
+// Killing buffers
+define_key(default_global_keymap, "C-x k", "kill-current-buffer");
 can_kill_last_buffer = false;
 
 // External links
