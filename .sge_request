@@ -1,4 +1,5 @@
 -P compbio_lab
+-R y
 -S /bin/bash
 -V
 -cwd
