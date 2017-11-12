@@ -51,6 +51,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+t floating toggle
 bindsym $mod+w move workspace to output left
 bindsym $mod+y exec "urxvtc -e ssh pt"
+bindsym $mod+u exec "urxvtc -e ssh midway2"
 bindsym XF86AudioLowerVolume exec "amixer set Master 2dB- unmute"
 bindsym XF86AudioMicMute exec "amixer set Capture toggle"
 bindsym XF86AudioMute exec "amixer set Master toggle"
