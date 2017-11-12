@@ -7,6 +7,7 @@ my_whitelist[2] = [
     "gstatic.com",
     "maps.googleapis.com",
     "mit.edu",
+    "uchicago.edu",
 ];
 // XMLHTTPRequest
 my_whitelist[11] = [
