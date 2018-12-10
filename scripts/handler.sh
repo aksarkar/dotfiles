@@ -21,14 +21,14 @@ function setbg {
 }
 
 function dock {
-    xrandr --output HDMI2 --auto --output LVDS1 --off
-    xrandr --output HDMI3 --auto --primary --left-of HDMI2
+    xrandr --output DP2 --auto --primary --output LVDS1 --off
+    xrandr --output DP3 --auto --right-of DP2
     setbg
 }
 
 function undock {
-    xrandr --output HDMI2 --off
-    xrandr --output LVDS1 --auto --primary --output HDMI3 --off
+    xrandr --output DP2 --off
+    xrandr --output LVDS1 --auto --primary --output DP3 --off
     setbg
 }
 
@@ -36,6 +36,7 @@ function standby {
     mount | awk '$5 == "fuse.sshfs" {print $3}' | parallel umount
     lock
     pm-suspend
+    sleep 1
     # Make sure video outputs are correct on resume
     if [[ -d $dockusb ]]
     then
