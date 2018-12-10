@@ -15,5 +15,5 @@ export EDITOR='emacsclient -c'
 export INFOPATH=/usr/local/info:/usr/share/info
 export MAILDIR=$HOME/mail
 export TERM='xterm-256color'
-export PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-linux
+export PATH=$PATH:$HOME/.local/texlive/2018/bin/x86_64-linux
 export VISUAL=$EDITOR
