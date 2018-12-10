@@ -4,3 +4,5 @@
 .xmonad/xmonad.o
 .aria2/dht.dat
 mpv/watch_later
+qutebrowser/autoconfig.yml
+qutebrowser/qsettings

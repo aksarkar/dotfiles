@@ -9,4 +9,4 @@ xs=(
     "http://what-if.xkcd.com/"
     "http://zenpencils.com"
    )
-parallel -j1 -X conkeror ::: ${xs[*]}
+parallel -j1 -X qutebrowser ::: ${xs[*]}

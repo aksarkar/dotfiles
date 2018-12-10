@@ -1,5 +1,5 @@
 c.completion.shrink = True
-c.completion.web_history_max_items = 10
+c.completion.web_history.max_items = 10
 c.downloads.location.directory = "/home/asarkar/incoming"
 c.editor.command = ["emacsclient", "{}"]
 c.hints.scatter = False
@@ -7,8 +7,33 @@ c.hints.uppercase = True
 c.tabs.new_position.related = "last"
 c.tabs.show = "never"
 c.url.default_page = "about:blank"
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}', 'maps': 'https://maps.google.com/?q={}'}
-c.url.start_pages = ['qute://settings']
+c.url.searchengines = {
+    'DEFAULT': 'https://www.google.com/search?q={}',
+    'maps': 'https://maps.google.com/?q={}',
+    'youtube': 'https://www.youtube.com/results?search_query={}',
+    'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
+}
+c.url.start_pages = ['about:blank']
+
+config.bind(',d', 'download-open mupdf')
+config.bind(',j', 'config-cycle -p content.javascript.enabled')
+config.bind(',p', 'config-cycle -p content.proxy socks://localhost:8080 system')
+config.bind(',z', 'zoom 200')
+config.bind(';x', 'hint links spawn -d mpv {hint-url}')
+config.bind(';X', 'hint links fill :spawn {hint-url}')
+
+config.bind('<Ctrl-F>', 'fake-key <Right>', mode='insert')
+config.bind('<Ctrl-B>', 'fake-key <Left>', mode='insert')
+config.bind('<Ctrl-N>', 'fake-key <Down>', mode='insert')
+config.bind('<Ctrl-P>', 'fake-key <Up>', mode='insert')
+config.bind('<Ctrl-W>', 'fake-key <Ctrl-Backspace', mode='insert')
+config.bind('<Alt-D>', 'fake-key <Ctrl-Delete>', mode='insert')
+config.bind('<Alt-F>', 'fake-key <Ctrl-Right>', mode='insert')
+config.bind('<Alt-B>', 'fake-key <Ctrl-Left>', mode='insert')
+config.bind('<Ctrl-A>', 'fake-key <Ctrl-Home>', mode='insert')
+config.bind('<Ctrl-E>', 'fake-key <Ctrl-End>', mode='insert')
+config.bind('<Ctrl-Shift-I>', 'open-editor', mode='insert')
+config.bind('<Ctrl-K>', 'fake-key <Shift-End> ;; fake-key <Delete>', mode='insert')
 
 # solarized colors
 
@@ -77,6 +102,8 @@ c.colors.statusbar.insert.bg = base3
 c.colors.statusbar.insert.fg = cyan
 c.colors.statusbar.normal.bg = base3
 c.colors.statusbar.normal.fg = base00
+c.colors.statusbar.passthrough.bg = base3
+c.colors.statusbar.passthrough.fg = blue
 c.colors.statusbar.private.bg = base03
 c.colors.statusbar.private.fg = base0
 c.colors.statusbar.progress.bg = base3
@@ -103,3 +130,5 @@ c.fonts.web.family.fixed = "Consolas"
 c.fonts.web.family.sans_serif = "Fontin Sans"
 c.fonts.web.family.serif = "Fontin"
 c.fonts.web.family.standard = "Fontin"
+
+# -*- python-indent-offset: 2 -*-
