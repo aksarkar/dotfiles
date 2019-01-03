@@ -1,5 +1,12 @@
+pcm.myhdmi {
+type hw
+card 0
+device 3
+}
+
 pcm.!default {
-	type hw
-	card 0
-	device 3
+type softvol
+slave.pcm "myhdmi"
+control.name "HDMI"
+control.card 0
 }
