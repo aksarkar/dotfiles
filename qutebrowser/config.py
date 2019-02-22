@@ -1,6 +1,6 @@
 c.completion.shrink = True
 c.completion.web_history.max_items = 10
-c.downloads.location.directory = "/home/asarkar/incoming"
+c.downloads.location.directory = "/home/aksarkar/incoming"
 c.editor.command = ["emacsclient", "{}"]
 c.hints.scatter = False
 c.hints.uppercase = True

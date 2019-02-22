@@ -44,7 +44,7 @@ bindsym $mod+h focus down
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 bindsym $mod+l focus up
-bindsym $mod+p exec --no-startup-id "dmenu_run -fn Consolas:bold:pixelsize=12 -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
+bindsym $mod+p exec --no-startup-id "dmenu_run -fn Consolas:bold:size=8 -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
 bindsym $mod+q reload
 bindsym $mod+s exec spawn "quodlibet --previous"
 bindsym $mod+space focus mode_toggle
