@@ -52,18 +52,10 @@ bindsym $mod+t floating toggle
 bindsym $mod+w move workspace to output left
 bindsym $mod+y exec "urxvtc -e ssh pt"
 bindsym $mod+u exec "urxvtc -e ssh midway2"
-bindsym XF86AudioLowerVolume exec "amixer set Master 2dB- unmute"
-bindsym XF86AudioMicMute exec "amixer set Capture toggle"
-bindsym XF86AudioMute exec "amixer set Master toggle"
-bindsym XF86AudioNext exec "quodlibet --next"
-bindsym XF86AudioPlay exec "quodlibet --play-pause"
-bindsym XF86AudioPrev exec "quodlibet --previous"
-bindsym XF86AudioRaiseVolume exec "amixer set Master 2dB+ unmute"
-bindsym XF86AudioStop exec "quodlibet --pause"
 
 for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
 
 exec --no-startup-id i3-msg "workspace 1; exec qutebrowser"
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc -a ''"
+exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc"

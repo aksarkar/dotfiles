@@ -1,28 +1,11 @@
 #!/bin/bash
 set -e
-
-# System xinitrc
-if [[ -d /etc/X11/xinit/xinitrc.d ]]
-then
-    for f in $(find /etc/X11/xinit/xinitrc.d/ -type f -executable)
-    do
-        . $f
-    done
-fi
-
-# Local resources
 xrdb -merge .Xresources
-
-sh .fehbg
-
-# Ultranav configuration
-xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
-
-# Daemons
-ionice -c 3 dropbox start -i &
-redshift &
-unclutter -not QEMU &
+xinput set-prop "DELL08AF:00 06CB:76AF Touchpad" "libinput Accel Speed" 1
+xinput set-prop "DELL08AF:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 1
+setxkbmap -option ctrl:swapcaps
+sh $HOME/.fehbg
+emacs --daemon &
 urxvtd &
-xautolock -locker "i3lock -c 000000 -u" &
-
+xss-lock -- i3lock -c 000000 -u &
 exec i3

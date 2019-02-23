@@ -14,5 +14,5 @@ export BROWSER='conkeror'
 export EDITOR='emacsclient -c'
 export MAILDIR=$HOME/mail
 export TERM='xterm-256color'
-export PATH=$PATH
+export PATH=$PATH:$HOME/.local/texlive/2018/bin/x86_64-linux/
 export VISUAL=$EDITOR

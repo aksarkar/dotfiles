@@ -1,5 +1,5 @@
 #define SOLARIZED_DARK
-#define FONT Consolas-12
+#define FONT Consolas-10
 
 ! Emacs
 Emacs.font: FONT

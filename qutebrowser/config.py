@@ -12,13 +12,14 @@ c.url.searchengines = {
     'maps': 'https://maps.google.com/?q={}',
     'youtube': 'https://www.youtube.com/results?search_query={}',
     'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
+    'arch': 'https://wiki.archlinux.org/index.php?search={}',
 }
 c.url.start_pages = ['about:blank']
+c.zoom.default = "250%"
 
 config.bind(',d', 'download-open mupdf')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
 config.bind(',p', 'config-cycle -p content.proxy socks://localhost:8080 system')
-config.bind(',z', 'zoom 200')
 config.bind(';x', 'hint links spawn -d mpv {hint-url}')
 config.bind(';X', 'hint links fill :spawn {hint-url}')
 
