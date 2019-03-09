@@ -1,5 +1,6 @@
 c.completion.shrink = True
 c.completion.web_history.max_items = 10
+c.content.autoplay = False
 c.downloads.location.directory = "/home/aksarkar/incoming"
 c.editor.command = ["emacsclient", "{}"]
 c.hints.scatter = False
@@ -17,7 +18,7 @@ c.url.searchengines = {
 c.url.start_pages = ['about:blank']
 c.zoom.default = "250%"
 
-config.bind(',d', 'download-open mupdf')
+config.bind(',d', 'download-open evince')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
 config.bind(',p', 'config-cycle -p content.proxy socks://localhost:8080 system')
 config.bind(';x', 'hint links spawn -d mpv {hint-url}')
