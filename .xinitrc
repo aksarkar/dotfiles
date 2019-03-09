@@ -8,5 +8,6 @@ sh $HOME/.fehbg
 emacs --daemon &
 redshift &
 urxvtd &
+unclutter &
 xss-lock -- i3lock -c 000000 -u &
 exec i3
