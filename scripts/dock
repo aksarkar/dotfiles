@@ -1,0 +1,4 @@
+#!/bin/bash
+boltctl info "10a559f4-de0e-8680-ffff-ffffffffffff" | grep -qw connected || exit
+xrandr --output eDP1 --off --output DP1-2 --preferred --scale 2x2 --primary --output DP2-2 --preferred --scale 2x2 --pos 3840x0
+sh $HOME/.fehbg
