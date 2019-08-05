@@ -3,16 +3,10 @@
 
 # dotkits
 use -q taciturn
-use .bedtools-2.24.0
-use .curl-7.23.0
-use .cuda-7.0-ea
-use .emacs-24.5
-use .git-2.0.5
-use .gtool-0.7.5
-use .impute2-2.3.2
-use .snptest-2.5.1
+use .git-2.16.1
+use .emacs-26.2
 use Anaconda3
-use GCC-4.9
+use GCC-5.2
 use Matlab
 use UGER
 
