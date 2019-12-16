@@ -1,4 +1,3 @@
-http-header=Client-ID=ewvlchtxgqq88ru9gmfp1gmyt6h2b93
-best-stream-default
+default-stream=best
 player=mpv
 loglevel=error
