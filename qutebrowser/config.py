@@ -115,18 +115,17 @@ c.colors.statusbar.url.success.http.fg = red
 c.colors.statusbar.url.success.https.fg = base00
 c.colors.statusbar.url.warn.fg = orange
 
-monospace = "10pt monospace"
+monospace = "9pt Consolas"
 
-c.fonts.completion.category = "bold" + monospace
+c.fonts.completion.category = "bold " + monospace
 c.fonts.completion.entry = monospace
 c.fonts.downloads = monospace
-c.fonts.hints = "bold 10pt monospace"
+c.fonts.hints = "bold " + monospace
 c.fonts.keyhint = monospace
 c.fonts.messages.error = monospace
 c.fonts.messages.info = monospace
 c.fonts.messages.warning = monospace
-c.fonts.monospace = "Consolas"
-c.fonts.prompts = "10pt sans-serif"
+c.fonts.prompts = "10pt Segoe UI"
 c.fonts.statusbar = monospace
 c.fonts.web.family.fixed = "Consolas"
 c.fonts.web.family.sans_serif = "Fontin Sans"
