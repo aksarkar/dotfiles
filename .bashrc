@@ -16,5 +16,5 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=.25
 export MAILDIR=$HOME/mail
 export TERM='xterm-256color'
-export PATH=$PATH:$HOME/.local/texlive/2018/bin/x86_64-linux/
+export PATH=$PATH:$HOME/.local/texlive/2018/bin/x86_64-linux/:$HOME/.local/miniconda3/bin
 export VISUAL=$EDITOR
