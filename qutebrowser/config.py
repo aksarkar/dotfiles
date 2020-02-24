@@ -14,6 +14,7 @@ c.url.searchengines = {
     'youtube': 'https://www.youtube.com/results?search_query={}',
     'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
     'arch': 'https://wiki.archlinux.org/index.php?search={}',
+    'scholar': 'https://scholar.google.com/scholar?q={}'
 }
 c.url.start_pages = ['about:blank']
 c.zoom.default = "250%"
