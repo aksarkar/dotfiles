@@ -23,7 +23,7 @@ config.bind(',d', 'download-open evince')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
 config.bind(',p', 'config-cycle -p content.proxy socks://localhost:8080 system')
 config.bind(';x', 'hint links spawn -d mpv {hint-url}')
-config.bind(';X', 'hint links fill :spawn {hint-url}')
+config.bind(';X', 'hint links fill :spawn "{hint-url}"')
 
 config.bind('<Ctrl-F>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-B>', 'fake-key <Left>', mode='insert')
@@ -112,6 +112,7 @@ c.colors.statusbar.private.fg = base0
 c.colors.statusbar.progress.bg = base3
 c.colors.statusbar.url.error.fg = red
 c.colors.statusbar.url.fg = base00
+c.colors.statusbar.url.hover.fg = cyan
 c.colors.statusbar.url.success.http.fg = red
 c.colors.statusbar.url.success.https.fg = base00
 c.colors.statusbar.url.warn.fg = orange
