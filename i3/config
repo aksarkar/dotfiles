@@ -1,6 +1,6 @@
 set $mod Mod4
 floating_modifier $mod
-font pango:Consolas bold 7.25
+font pango:Jetbrains Mono Bold 8
 new_float 1pixel
 new_window none
 workspace_layout tabbed
@@ -11,6 +11,7 @@ client.focused_inactive #002b36 #002b36 #839496 #839496
 client.unfocused #002b36 #002b36 #839496 #839496
 client.urgent #dc322f #dc322f #fdf6e3 #fdf6e3
 
+bindsym $mod+0 workspace 10
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -42,24 +43,25 @@ bindsym $mod+h focus down
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 bindsym $mod+l focus up
-bindsym $mod+p exec --no-startup-id "dmenu_run -fn Consolas:bold:size=8 -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
+bindsym $mod+p exec --no-startup-id "dmenu_run -fn 'Jetbrains Mono-9' -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
 bindsym $mod+q reload
 bindsym $mod+space focus mode_toggle
 bindsym $mod+t floating toggle
 bindsym $mod+u exec "urxvtc -e ssh midway2"
 bindsym $mod+w move workspace to output left
-bindsym XF86AudioLowerVolume exec "amixer sset Master -3%"
+bindsym XF86AudioLowerVolume exec "amixer set Master 3%-"
 bindsym XF86AudioMute exec "amixer sset Master toggle"
 bindsym XF86AudioNext exec "quodlibet --next"
 bindsym XF86AudioPlay exec "quodlibet --play-pause"
 bindsym XF86AudioPrev exec spawn "quodlibet --previous"
-bindsym XF86AudioRaiseVolume exec "amixer sset Master +3%"
+bindsym XF86AudioRaiseVolume exec "amixer set Master 3%+"
 bindsym XF86MonBrightnessDown exec "xbacklight -10"
 bindsym XF86MonBrightnessUp exec "xbacklight +10"
 
 for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
 
-exec --no-startup-id i3-msg "workspace 1; exec qutebrowser"
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 2; exec emacsclient -nc"
+exec --no-startup-id i3-msg "workspace 10; exec urxvtc -e alsamixer"
+exec --no-startup-id i3-msg "workspace 2; exec emacsclient -c"
+exec --no-startup-id i3-msg "workspace 1; exec qutebrowser"
