@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 PS1='\u@\h:\w\$ '
 
 export ALTERNATE_EDITOR=''
+export AUR_PAGER='emacsclient'
 export BROWSER='conkeror'
 export EDITOR='emacsclient -c'
 export GDK_SCALE=2
