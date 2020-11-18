@@ -38,13 +38,16 @@ bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move right
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+q exec "i3-msg exit"
+bindsym $mod+d exec "quodlibet --play-pause"
 bindsym $mod+e move workspace to output right
+bindsym $mod+f exec "quodlibet --next"
 bindsym $mod+h focus down
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 bindsym $mod+l focus up
-bindsym $mod+p exec --no-startup-id "dmenu_run -fn 'Jetbrains Mono-9' -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
+bindsym $mod+p exec --no-startup-id "dmenu_run -fn 'Jetbrains Mono-8' -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
 bindsym $mod+q reload
+bindsym $mod+s exec spawn "quodlibet --previous"
 bindsym $mod+space focus mode_toggle
 bindsym $mod+t floating toggle
 bindsym $mod+u exec "urxvtc -e ssh midway2"
