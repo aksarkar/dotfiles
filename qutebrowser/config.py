@@ -1,3 +1,5 @@
+config.load_autoconfig()
+
 c.completion.shrink = True
 c.completion.web_history.max_items = 10
 c.content.autoplay = False
