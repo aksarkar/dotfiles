@@ -14,7 +14,7 @@ split: cdda.cue cdda.wav
 	cuebreakpoints $< | shntool split $(word 2, $^) || ln cdda.wav split-track01.wav
 
 cdda.flac: cdda.wav
-	ffmpeg -v quiet -i $< -acodec flac -compression_level 10 $@
+	flac --best $< -o $@
 
 cdda.wav:
 	cdparanoia -q 1- $@
