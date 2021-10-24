@@ -84,7 +84,7 @@ Xcursor*theme: Chameleon-Anthracite-Small
 ! Xft
 Xft.antialias: true
 Xft.autohint: false
-Xft.dpi: 336
+Xft.dpi: 170
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault

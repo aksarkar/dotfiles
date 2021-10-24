@@ -19,7 +19,7 @@ c.url.searchengines = {
     'scholar': 'https://scholar.google.com/scholar?q={}'
 }
 c.url.start_pages = ['about:blank']
-c.zoom.default = "250%"
+c.zoom.default = "150%"
 
 config.bind(',d', 'download-open evince')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
