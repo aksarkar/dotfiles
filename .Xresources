@@ -1,5 +1,5 @@
 #define SOLARIZED_DARK
-#define FONT Consolas-10
+#define FONT Fira Code-10
 
 ! Emacs
 Emacs.font: FONT
@@ -84,7 +84,7 @@ Xcursor*theme: Chameleon-Anthracite-Small
 ! Xft
 Xft.antialias: true
 Xft.autohint: false
-Xft.dpi: 170
+Xft.dpi: 192
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
