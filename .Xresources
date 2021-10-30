@@ -1,5 +1,5 @@
 #define SOLARIZED_DARK
-#define FONT Fira Code-10
+#define FONT Fira Code-8
 
 ! Emacs
 Emacs.font: FONT

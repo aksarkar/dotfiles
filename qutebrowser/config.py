@@ -119,7 +119,7 @@ c.colors.statusbar.url.success.http.fg = red
 c.colors.statusbar.url.success.https.fg = base00
 c.colors.statusbar.url.warn.fg = orange
 
-monospace = "9pt Consolas"
+monospace = "7.5pt Fira Code"
 
 c.fonts.completion.category = "bold " + monospace
 c.fonts.completion.entry = monospace
@@ -131,7 +131,7 @@ c.fonts.messages.info = monospace
 c.fonts.messages.warning = monospace
 c.fonts.prompts = "10pt Segoe UI"
 c.fonts.statusbar = monospace
-c.fonts.web.family.fixed = "Consolas"
+c.fonts.web.family.fixed = "Fira Code"
 c.fonts.web.family.sans_serif = "Fontin Sans"
 c.fonts.web.family.serif = "Fontin"
 c.fonts.web.family.standard = "Fontin"
