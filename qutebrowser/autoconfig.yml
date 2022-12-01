@@ -18,3 +18,5 @@ settings:
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
     https://mail.google.com?extsrc=mailto&url=%25s: false
+  downloads.prevent_mixed_content:
+    global: true
