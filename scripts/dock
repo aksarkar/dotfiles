@@ -1,4 +1,3 @@
 #!/bin/bash
-boltctl info "10a559f4-de0e-8680-ffff-ffffffffffff" | awk '/status/ {exit $3 == "disconnected"}' || exit
-xrandr --output eDP1 --off --output DP1-2 --preferred --scale 2x2 --primary --output DP2-2 --preferred --scale 2x2 --pos 3840x0
-sh $HOME/.fehbg
+xrandr | grep -q DisplayPort-3 || exit
+xrandr --output DisplayPort-3 --auto --right-of eDP --output DisplayPort-4 --auto --right-of DisplayPort-3

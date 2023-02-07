@@ -1,2 +1,2 @@
 #!/bin/bash
-xrandr --output eDP1 --auto --primary --output DP1-2 --off --output DP2-2 --off
+xrandr --output DisplayPort-3 --off --output DisplayPort-4 --off
