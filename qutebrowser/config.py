@@ -20,7 +20,7 @@ c.url.searchengines = {
     'vroomcat': 'https://vro.omcat.info/search?q={}',
 }
 c.url.start_pages = ['about:blank']
-c.zoom.default = "150%"
+c.zoom.default = "100%"
 
 config.bind(',d', 'download-open evince')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
