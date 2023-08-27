@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 xrdb -merge .Xresources
-setxkbmap -device 14 -option ctrl:swapcaps -option compose:ralt
+setxkbmap -device $(xinput -list | sed -n '/AT Translated Set 2 keyboard/ s/.*id=\([0-9]*\).*/\1/p') -option ctrl:swapcaps -option compose:ralt
 sh $HOME/.fehbg
 redshift &
 urxvtd &
