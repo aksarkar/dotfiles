@@ -12,12 +12,13 @@ c.tabs.show = "never"
 c.url.default_page = "about:blank"
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
-    'maps': 'https://maps.google.com/?q={}',
-    'youtube': 'https://www.youtube.com/results?search_query={}',
-    'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
     'arch': 'https://wiki.archlinux.org/index.php?search={}',
+    'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
+    'investopedia': 'https://www.investopedia.com/search?q={}',
+    'maps': 'https://maps.google.com/?q={}',
     'scholar': 'https://scholar.google.com/scholar?q={}',
     'vroomcat': 'https://vro.omcat.info/search?q={}',
+    'youtube': 'https://www.youtube.com/results?search_query={}',
 }
 c.url.start_pages = ['about:blank']
 c.zoom.default = "75%"
