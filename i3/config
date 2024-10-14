@@ -63,7 +63,6 @@ bindsym XF86MonBrightnessUp exec "light -A 10"
 
 for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
-for_window [class="zoom"] floating enable
 
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
 exec --no-startup-id i3-msg "workspace 10; exec urxvtc -e alsamixer"
