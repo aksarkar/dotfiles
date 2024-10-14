@@ -65,6 +65,6 @@ for_window [class="mpv"] floating enable
 for_window [class="pinentry"] floating enable
 
 exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 10; exec urxvtc -e alsamixer"
+exec --no-startup-id i3-msg "workspace 10; exec pavucontrol"
 exec --no-startup-id i3-msg "workspace 2; exec emacsclient -c"
 exec --no-startup-id i3-msg "workspace 1; exec qutebrowser"
