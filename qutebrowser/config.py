@@ -14,6 +14,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'arch': 'https://wiki.archlinux.org/index.php?search={}',
     'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
+    'define': 'https://en.wiktionary.org/wiki/Special:Search?search={}',
     'investopedia': 'https://www.investopedia.com/search?q={}',
     'maps': 'https://maps.google.com/?q={}',
     'scholar': 'https://scholar.google.com/scholar?q={}',
