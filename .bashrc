@@ -17,6 +17,7 @@ export GDK_SCALE=1
 export GDK_DPI_SCALE=0.5
 export QT_SCALE_FACTOR=1
 export MAILDIR=$HOME/mail
+export MAMBA_NO_BANNER=1
 export TERM='xterm-256color'
 export PATH=$PATH:$HOME/.local/texlive/2018/bin/x86_64-linux/:$HOME/.local/mambaforge/bin
 export VISUAL=$EDITOR
