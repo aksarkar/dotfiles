@@ -3,29 +3,32 @@ config.load_autoconfig()
 c.completion.shrink = True
 c.completion.web_history.max_items = 10
 c.content.autoplay = False
-c.downloads.location.directory = "/home/aksarkar/incoming"
-c.editor.command = ["emacsclient", "{}"]
+c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0'
+c.downloads.location.directory = '/home/aksarkar/incoming'
+c.editor.command = ['emacsclient', '{}']
 c.hints.scatter = False
 c.hints.uppercase = True
-c.tabs.new_position.related = "last"
-c.tabs.show = "never"
-c.url.default_page = "about:blank"
+c.tabs.new_position.related = 'last'
+c.tabs.show = 'never'
+c.url.default_page = 'about:blank'
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
-    'maps': 'https://maps.google.com/?q={}',
-    'youtube': 'https://www.youtube.com/results?search_query={}',
-    'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
     'arch': 'https://wiki.archlinux.org/index.php?search={}',
-    'scholar': 'https://scholar.google.com/scholar?q={}'
+    'enwp': 'https://en.wikipedia.org/w/index.php?title=Special:Search&search={}',
+    'define': 'https://en.wiktionary.org/wiki/Special:Search?search={}',
+    'investopedia': 'https://www.investopedia.com/search?q={}',
+    'maps': 'https://maps.google.com/?q={}',
+    'scholar': 'https://scholar.google.com/scholar?q={}',
+    'vroomcat': 'https://vro.omcat.info/search?q={}',
+    'youtube': 'https://www.youtube.com/results?search_query={}',
 }
 c.url.start_pages = ['about:blank']
-c.zoom.default = "250%"
+c.zoom.default = '125%'
 
 config.bind(',d', 'download-open evince')
 config.bind(',j', 'config-cycle -p content.javascript.enabled')
-config.bind(',p', 'config-cycle -p content.proxy socks://localhost:8080 system')
 config.bind(';x', 'hint links spawn -d mpv {hint-url}')
-config.bind(';X', 'hint links fill :spawn "{hint-url}"')
+config.bind(';X', "hint links fill :spawn '{hint-url}'")
 
 config.bind('<Ctrl-F>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-B>', 'fake-key <Left>', mode='insert')
@@ -42,22 +45,22 @@ config.bind('<Ctrl-K>', 'fake-key <Shift-End> ;; fake-key <Delete>', mode='inser
 
 # solarized colors
 
-base03 = "#002b36"
-base02 = "#073642"
-base01 = "#586e75"
-base00 = "#657b83"
-base0 = "#839496"
-base1 = "#93a1a1"
-base2 = "#eee8d5"
-base3 = "#fdf6e3"
-yellow = "#b58900"
-orange = "#cb4b16"
-red = "#dc322f"
-magenta = "#d33682"
-violet = "#6c71c4"
-blue = "#268bd2"
-cyan = "#2aa198"
-green = "#859900"
+base03 = '#002b36'
+base02 = '#073642'
+base01 = '#586e75'
+base00 = '#657b83'
+base0 = '#839496'
+base1 = '#93a1a1'
+base2 = '#eee8d5'
+base3 = '#fdf6e3'
+yellow = '#b58900'
+orange = '#cb4b16'
+red = '#dc322f'
+magenta = '#d33682'
+violet = '#6c71c4'
+blue = '#268bd2'
+cyan = '#2aa198'
+green = '#859900'
 
 c.colors.completion.category.bg = base3
 c.colors.completion.category.border.bottom = base3
@@ -119,21 +122,21 @@ c.colors.statusbar.url.success.http.fg = red
 c.colors.statusbar.url.success.https.fg = base00
 c.colors.statusbar.url.warn.fg = orange
 
-monospace = "9pt Consolas"
+monospace = '16pt Fira Code'
 
-c.fonts.completion.category = "bold " + monospace
+c.fonts.completion.category = 'bold ' + monospace
 c.fonts.completion.entry = monospace
 c.fonts.downloads = monospace
-c.fonts.hints = "bold " + monospace
+c.fonts.hints = 'bold ' + monospace
 c.fonts.keyhint = monospace
 c.fonts.messages.error = monospace
 c.fonts.messages.info = monospace
 c.fonts.messages.warning = monospace
-c.fonts.prompts = "10pt Segoe UI"
+c.fonts.prompts = '16pt Segoe UI'
 c.fonts.statusbar = monospace
-c.fonts.web.family.fixed = "Consolas"
-c.fonts.web.family.sans_serif = "Fontin Sans"
-c.fonts.web.family.serif = "Fontin"
-c.fonts.web.family.standard = "Fontin"
+c.fonts.web.family.fixed = 'Fira Code'
+c.fonts.web.family.sans_serif = 'Fontin Sans'
+c.fonts.web.family.serif = 'Fontin'
+c.fonts.web.family.standard = 'Fontin'
 
 # -*- python-indent-offset: 2 -*-

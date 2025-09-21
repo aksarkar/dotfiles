@@ -1,0 +1,11 @@
+[general]
+import = [
+       'solarized-dark.toml'
+       ]
+
+[font]
+size = 16
+
+[font.normal]
+family = "Fira Code"
+

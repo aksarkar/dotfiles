@@ -9,7 +9,7 @@ browser = Paned
 browser_playlistsbrowser_maximized = 0
 browser_playlistsbrowser_position = 0 18
 browser_playlistsbrowser_size_ = 1440 882
-chooser_dir = /home/asarkar
+chooser_dir = /home/aksarkar/music
 column_expands = <composer>,0,<work|<work><title| - |>><title|<title>>,1,~album~discsubtitle,1,<artist>,1
 	
 column_widths = <composer>,244,<work|<work><title| - |>><title|<title>>,-1,~album~discsubtitle,-1,<artist>,-1
@@ -21,12 +21,13 @@ plugin_prefs_size_ = 700 500
 plugin_selection = Python Console
 prefs_page = playback
 queue = True
+queue_disable = False
 queue_expanded = False
 queue_position = 0.7416666666666667
 quodlibet_information_maximized = 0
 quodlibet_information_position = 1779 149
 quodlibet_information_size_ = 400 400
-quodlibet_last_active_version = 4.2.1
+quodlibet_last_active_version = 4.7.1
 quodlibet_maximized = 0
 quodlibet_position = 0 0
 quodlibet_properties_maximized = 0
@@ -34,9 +35,9 @@ quodlibet_properties_pos = 0.3333333333333333
 quodlibet_properties_position = 520 245
 quodlibet_properties_size_ = 600 400
 quodlibet_properties_size_single = 459 397
-quodlibet_size_ = 1440 900
+quodlibet_size_ = 1920 1200
 seek = 0
-shuffle = True
+shuffle = False
 shuffle_mode = Queue Only
 sidebar_pos = 0.25
 song = 
@@ -47,17 +48,17 @@ volume = 1.0
 [browsers]
 audiofeeds_pos = 0.4
 internetradio_pos = 0.129166666667
-pane_mode = Wide
-pane_selection = 0	Shankar, Ravi	.
-	1	.
+pane_mode = 1
+pane_selection = 0	Beethoven, Ludwig van	.
+	0	Piano Concerto No. 5 in E-flat, Op. 73 ('Emperor')	.
 	1	.
 pane_wide_mode = true
-panedbrowser_pane_widths = 0.3328785811732606,0.49793388429752067
+panedbrowser_pane_widths = 0.3330068560235064,0.4985207100591716
 	
-panedbrowser_pos = 0.20347222222222222
+panedbrowser_pos = 0.24270833333333333
 panes = composer	<work|<work>|<title>>	artist
 playlistsbrowser_pos = 0.402083333333
-query_text = 
+query_text = emperor
 radio = __fav
 soundcloud_pos = 0.4
 
@@ -68,8 +69,8 @@ replaygain_mode = auto
 time_remaining = true
 
 [plugins]
-active_plugins = queue
-	Python Console
+active_plugins = Python Console
+	queue
 animosd_monitor = 0
 scrobbler_service = Last.fm
 squeezebox_debug = False

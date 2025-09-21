@@ -1,6 +1,0 @@
-#!/bin/bash
-set -e
-set -u
-in=$1
-shift
-ssh athena lpr $* < $in

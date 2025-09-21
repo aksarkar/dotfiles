@@ -1,10 +1,24 @@
+include /etc/sway/config.d/*
+
+exec --no-startup-id dbus-update-activation-environment --all
+exec wlsunset -l 43.7 -L -72.29
+exec swayidle -w
+exec qutebrowser
+exec emacsclient -c
+
 set $mod Mod4
+font pango:Fira Code bold 12
 floating_modifier $mod
-font pango:Jetbrains Mono Bold 8
-new_float 1pixel
-new_window none
 workspace_layout tabbed
 focus_follows_mouse no
+default_border none
+hide_edge_borders --i3 both
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_options "ctrl:swapcaps"
+}
+
+output eDP-1 background /usr/share/backgrounds/CarinaNebulaGerminiani.jpg fill
 
 client.focused #839496 #839496 #002b36 #839496
 client.focused_inactive #002b36 #002b36 #839496 #839496
@@ -31,40 +45,35 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+Return exec urxvtc
+bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+h move down
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move right
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+q exec "i3-msg exit"
-bindsym $mod+d exec "quodlibet --play-pause"
+bindsym $mod+Shift+q exec swaymsg exit
 bindsym $mod+e move workspace to output right
-bindsym $mod+f exec "quodlibet --next"
 bindsym $mod+h focus down
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 bindsym $mod+l focus up
-bindsym $mod+p exec --no-startup-id "dmenu_run -fn 'Jetbrains Mono-8' -nb \#002b36 -nf \#93a1a1 -sb \#073642 -sf \#93a1a1"
+bindsym $mod+p exec wmenu-run -f 'Fira Code 13' -N 002b36 -n 93a1a1 -S 073642 -s 93a1a1
+bindsym $mod+t focus mode_toggle
 bindsym $mod+q reload
-bindsym $mod+s exec spawn "quodlibet --previous"
 bindsym $mod+space focus mode_toggle
-bindsym $mod+t floating toggle
-bindsym $mod+u exec "urxvtc -e ssh midway2"
+bindsym $mod+u exec alacritty -e ssh asarkar-singlecell
 bindsym $mod+w move workspace to output left
-bindsym XF86AudioLowerVolume exec "amixer set Master 3%-"
-bindsym XF86AudioMute exec "amixer sset Master toggle"
-bindsym XF86AudioNext exec "quodlibet --next"
-bindsym XF86AudioPlay exec "quodlibet --play-pause"
-bindsym XF86AudioPrev exec spawn "quodlibet --previous"
-bindsym XF86AudioRaiseVolume exec "amixer set Master 3%+"
-bindsym XF86MonBrightnessDown exec "xbacklight -10"
-bindsym XF86MonBrightnessUp exec "xbacklight +10"
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
 
-for_window [class="mpv"] floating enable
-for_window [class="pinentry"] floating enable
+for_window [class="zoom"] floating enable
+for_window [app_id="mpv"] floating enable
+for_window [class="Pinentry-gtk"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_role="dialog"] floating enable
 
-exec --no-startup-id i3-msg "workspace 9; exec quodlibet"
-exec --no-startup-id i3-msg "workspace 10; exec urxvtc -e alsamixer"
-exec --no-startup-id i3-msg "workspace 2; exec emacsclient -c"
-exec --no-startup-id i3-msg "workspace 1; exec qutebrowser"
+seat * hide_cursor 3000

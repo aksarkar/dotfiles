@@ -1,3 +1,2 @@
 #!/bin/bash
-sed -i '1s/LIGHT/FOO/; 1s/DARK/LIGHT/; 1s/FOO/DARK/' $HOME/.Xresources
-xrdb merge $HOME/.Xresources
+sed -i 't done; s/light/dark/; t; s/dark/light/; :done' ~/.config/alacritty/alacritty.toml
