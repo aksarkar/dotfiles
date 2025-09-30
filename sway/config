@@ -18,7 +18,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
   xkb_options "ctrl:swapcaps"
 }
 
-output eDP-1 background /usr/share/backgrounds/CarinaNebulaGerminiani.jpg fill
+output * background /usr/share/backgrounds/CarinaNebulaGerminiani.jpg fill
 
 client.focused #839496 #839496 #002b36 #839496
 client.focused_inactive #002b36 #002b36 #839496 #839496
